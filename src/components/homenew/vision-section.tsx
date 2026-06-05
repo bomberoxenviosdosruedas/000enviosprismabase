@@ -38,10 +38,6 @@ export const VisionSection = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.8, ease: "easeOut" }}
           >
-            <div className="inline-flex items-center gap-3 px-4 py-2 rounded-sm bg-primary/10 border border-primary/20 text-primary text-xxs font-black tracking-[0.3em] mb-10 uppercase">
-              <span className="w-1.5 h-1.5 rounded-full bg-primary animate-pulse" /> Partner Logístico Especializado
-            </div>
-
             <h2 className="text-headline-lg-mobile md:text-display-lg mb-10 uppercase text-foreground font-bold">
               Nuestra Visión <br />
               <span className="text-primary">Logística</span>

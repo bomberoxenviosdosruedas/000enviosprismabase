@@ -65,9 +65,6 @@ export default function SliderServicios() {
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
           >
-            <div className="inline-flex items-center gap-2.5 px-4 py-2 rounded-sm bg-primary/10 border border-primary/20 text-primary text-xxs font-black tracking-[0.25em] mb-8 uppercase font-sans">
-              <LayoutGrid size={12} className="text-primary animate-pulse" /> CAPACIDADES DINÁMICAS
-            </div>
             <h2 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-foreground uppercase tracking-tighter mb-4">
               SOLUCIONES A <span className="text-primary">MEDIDA</span>
             </h2>

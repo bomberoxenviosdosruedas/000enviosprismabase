@@ -40,15 +40,6 @@ export const CtaSection = () => {
           <div className="absolute -bottom-24 -left-24 w-80 h-80 bg-tertiary/5 blur-[80px] rounded-full" />
 
           <div className="relative z-10 text-center">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.2 }}
-              className="inline-flex items-center gap-3 px-4 py-2 rounded-sm bg-primary-foreground/10 border border-primary-foreground/20 text-primary-foreground text-xxs font-black tracking-[0.4em] mb-8 uppercase"
-            >
-              <Zap size={16} className="fill-primary-container text-primary-container animate-pulse" /> ¡Empezá Ahora!
-            </motion.div>
-
             <h2 className="text-headline-lg-mobile md:text-display-lg text-primary-foreground mb-8 uppercase font-bold">
               ¿Listo para escalar la <br />
               <span className="text-secondary-container">logística de tu E-Commerce?</span>

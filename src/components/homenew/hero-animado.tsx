@@ -2,7 +2,6 @@ import Link from 'next/link';
 import { Play, ArrowRight, ShieldCheck, Zap, Globe } from 'lucide-react';
 import { HeroBackground } from './hero-background';
 import { HeroVisuals } from './hero-visuals';
-import { HeroScrollIndicator } from './hero-scroll-indicator';
 
 export default function HeroAnimado() {
   return (
@@ -26,7 +25,7 @@ export default function HeroAnimado() {
           </h1>
 
           <p className="text-muted-foreground text-body-lg mb-8 xl:mb-10 max-w-2xl mx-auto lg:mx-0 animate-in fade-in slide-in-from-bottom-4 duration-1000 delay-500 fill-mode-both">
-            Somos tu solución confiable en servicios de mensajería y delivery en Mar del Plata. Ofrecemos soluciones rápidas, seguras y económicas para todas tus necesidades de envío.
+            Mensajería y delivery rápido, seguro y económico en Mar del Plata. Soluciones logísticas a la medida de tu negocio.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-6 justify-center lg:justify-start items-center animate-in fade-in slide-in-from-bottom-4 duration-1000 delay-700 fill-mode-both">
@@ -70,8 +69,6 @@ export default function HeroAnimado() {
         <HeroVisuals />
       </div>
 
-      {/* Scroll Indicator - Client Component */}
-      <HeroScrollIndicator />
     </section>
   );
 }

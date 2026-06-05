@@ -76,9 +76,6 @@ export const CarruselRedes = () => {
       <div className="max-w-7xl mx-auto relative z-10">
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-10 mb-20">
           <div>
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-sm bg-primary/10 border border-primary/20 text-primary text-xxs font-bold tracking-widest mb-6 uppercase">
-              <Heart size={12} className="fill-primary" /> CONECTA CON NOSOTROS
-            </div>
             <h2 className="font-display text-4xl md:text-5xl font-bold text-foreground uppercase tracking-tighter">
               SIGUE NUESTRO <span className="text-primary">MOVIMIENTO</span>
             </h2>

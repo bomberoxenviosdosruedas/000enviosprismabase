@@ -30,8 +30,8 @@ export function NavDropdown({ group }: NavDropdownProps) {
           className={cn(
             "relative flex cursor-pointer items-center space-x-2 rounded px-4 py-2 text-sm font-medium transition-all duration-200",
             groupIsActive
-              ? "bg-primary/10 text-primary border border-primary/20"
-              : "text-muted-foreground hover:text-primary hover:bg-primary/5",
+              ? "bg-[#fbc107]/10 text-[#fbc107] border border-[#fbc107]/20"
+              : "text-white/80 hover:text-[#fbc107] hover:bg-white/5",
           )}
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
@@ -42,7 +42,7 @@ export function NavDropdown({ group }: NavDropdownProps) {
           {groupIsActive && (
             <motion.div
               layoutId="active-indicator"
-              className="absolute -bottom-1 left-1/2 -translate-x-1/2 w-1 h-1 rounded-full bg-primary shadow-[0_0_8px_rgba(103,80,164,0.5)]"
+              className="absolute -bottom-1 left-1/2 -translate-x-1/2 w-1 h-1 rounded-full bg-[#fbc107] shadow-[0_0_8px_rgba(251,193,7,0.5)]"
               transition={{ type: "spring", stiffness: 380, damping: 30 }}
             />
           )}
@@ -52,17 +52,17 @@ export function NavDropdown({ group }: NavDropdownProps) {
         {group.items.map((item: any) => {
           const ItemIcon = item.icon;
           return (
-            <DropdownMenuItem key={item.href} asChild className="focus:bg-primary/10 focus:text-primary cursor-pointer rounded p-3 transition-colors">
+            <DropdownMenuItem key={item.href} asChild className="focus:bg-[#fbc107]/10 focus:text-[#fbc107] cursor-pointer rounded p-3 transition-colors">
               <Link
                 href={item.href}
                 className={cn(
                   "flex items-center space-x-4",
-                  isActive(item.href) ? "text-primary font-bold" : "text-muted-foreground",
+                  isActive(item.href) ? "text-[#fbc107] font-bold" : "text-white/80 hover:text-[#fbc107]",
                 )}
               >
                 <div className={cn(
                   "w-8 h-8 rounded flex items-center justify-center transition-colors",
-                  isActive(item.href) ? "bg-primary/10 text-primary" : "bg-surface-variant text-muted-foreground"
+                  isActive(item.href) ? "bg-[#fbc107]/10 text-[#fbc107]" : "bg-surface-variant text-white/80"
                 )}>
                   {ItemIcon && <ItemIcon className="h-4 w-4" />}
                 </div>

@@ -50,7 +50,7 @@ const Footer = dynamic(() => import("@/components/homenew/footer").then(mod => m
 
 export default function HomePage() {
   return (
-    <div className="dark min-h-screen bg-background text-foreground selection:bg-primary/30 flex flex-col">
+    <div className="dark min-h-screen bg-background text-foreground selection:bg-[#2563eb]/30 flex flex-col">
       <OptimizedHeader />
       <main className="flex-grow">
         <div className="bg-gradient-to-b from-background via-[#030710]/20 to-[#030710]">

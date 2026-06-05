@@ -30,7 +30,7 @@ export function ActiveLink({ href, children, className, activeClassName }: Activ
         {isActive && (
           <motion.div
             layoutId="active-indicator"
-            className="absolute -bottom-1 left-1/2 -translate-x-1/2 w-1 h-1 rounded-full bg-primary shadow-[0_0_8px_rgba(103,80,164,0.5)]"
+            className="absolute -bottom-1 left-1/2 -translate-x-1/2 w-1 h-1 rounded-full bg-[#fbc107] shadow-[0_0_8px_rgba(251,193,7,0.5)]"
             transition={{ type: "spring", stiffness: 380, damping: 30 }}
           />
         )}

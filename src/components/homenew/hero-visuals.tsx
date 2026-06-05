@@ -75,12 +75,12 @@ export function HeroVisuals() {
               transition={{ repeat: Infinity, duration: 4, ease: "easeInOut" }}
               className="absolute -top-8 -right-8 px-5 py-4 rounded bg-card border border-outline-variant flex items-center gap-4 shadow-lg z-20"
             >
-              <div className="w-12 h-12 rounded bg-primary/10 flex items-center justify-center text-primary border border-primary/20">
+              <div className="w-12 h-12 rounded bg-[#2563eb]/10 flex items-center justify-center text-[#2563eb] border border-[#2563eb]/20">
                 <MousePointer2 size={24} />
               </div>
               <div>
                 <div className="text-[9px] text-muted-foreground uppercase font-bold tracking-[0.1em] mb-0.5">ESTADO REAL</div>
-                <div className="text-sm font-bold text-primary uppercase italic font-display">EN TRÁNSITO</div>
+                <div className="text-sm font-bold text-[#2563eb] uppercase italic font-display">EN TRÁNSITO</div>
               </div>
             </motion.div>
 
@@ -89,12 +89,12 @@ export function HeroVisuals() {
               transition={{ repeat: Infinity, duration: 5, ease: "easeInOut", delay: 0.5 }}
               className="absolute -bottom-10 -left-6 px-5 py-4 rounded bg-card border border-outline-variant flex items-center gap-4 shadow-lg z-20"
             >
-              <div className="w-12 h-12 rounded bg-secondary-container/20 flex items-center justify-center text-secondary border border-secondary-container/20">
+              <div className="w-12 h-12 rounded bg-[#fbc107]/10 flex items-center justify-center text-[#fbc107] border border-[#fbc107]/20">
                 <ShieldCheck size={24} />
               </div>
               <div>
                 <div className="text-[9px] text-muted-foreground uppercase font-bold tracking-[0.1em] mb-0.5">SEGURIDAD</div>
-                <div className="text-sm font-bold text-secondary uppercase italic font-display">VERIFICADO</div>
+                <div className="text-sm font-bold text-[#fbc107] uppercase italic font-display">VERIFICADO</div>
               </div>
             </motion.div>
           </motion.div>

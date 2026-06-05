@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
-import { Zap, ShieldCheck, CheckCircle2, Play, Globe, ArrowRight, MousePointer2 } from 'lucide-react';
+import { Zap, ShieldCheck, CheckCircle2, Play, Globe } from 'lucide-react';
 import Image from 'next/image';
 
 export const VisionSection = () => {
@@ -55,7 +55,7 @@ export const VisionSection = () => {
                   whileHover={{ x: 5 }}
                   transition={{ type: "spring", stiffness: 300, damping: 20 }}
                 >
-                  <div className="w-14 h-14 rounded-lg bg-surface-variant/40 border border-outline-variant flex items-center justify-center shrink-0 group-hover:bg-card group-hover:border-primary transition-all shadow-sm group-hover:shadow-md">
+                  <div className="w-14 h-14 rounded-xl bg-surface-variant/40 border border-outline-variant flex items-center justify-center shrink-0 group-hover:bg-card group-hover:border-primary transition-all shadow-sm group-hover:shadow-md">
                     {React.cloneElement(item.icon, { size: 28 })}
                   </div>
                   <div>
@@ -80,7 +80,7 @@ export const VisionSection = () => {
 
               <motion.div
                 whileHover={{ rotate: 90 }}
-                className="hidden md:flex ml-auto w-16 h-16 rounded border border-outline-variant items-center justify-center text-muted-foreground/60 hover:text-primary hover:border-primary transition-colors"
+                className="hidden md:flex ml-auto w-16 h-16 rounded-xl border border-outline-variant items-center justify-center text-muted-foreground/60 hover:text-primary hover:border-primary transition-colors"
               >
                 <Globe size={24} />
               </motion.div>
@@ -92,7 +92,7 @@ export const VisionSection = () => {
             style={{ scale, y }}
           >
             {/* Visual Frame */}
-            <div className="relative aspect-[4/5] rounded-lg overflow-hidden group border border-outline-variant shadow-lg">
+            <div className="relative aspect-[4/5] rounded-3xl overflow-hidden group border border-outline-variant shadow-lg">
               <Image
                 src="/hero/mapa_background.jpeg"
                 alt="Vanguardia Logística"
@@ -106,7 +106,7 @@ export const VisionSection = () => {
               <div className="absolute inset-0 bg-primary/5 opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none" />
 
               {/* Floating Interactive Hub */}
-              <div className="absolute bottom-6 left-6 right-6 p-6 lg:p-8 rounded-lg bg-card border border-outline-variant flex items-center justify-between transition-all duration-700 shadow-xl">
+              <div className="absolute bottom-6 left-6 right-6 p-6 lg:p-8 rounded-2xl bg-card border border-outline-variant flex items-center justify-between transition-all duration-700 shadow-xl">
                 <div className="mr-4">
                   <h3 className="font-display text-lg font-bold text-foreground uppercase tracking-tight mb-2">Conocé más sobre nosotros</h3>
                   <div className="flex items-center gap-2 text-xxs text-muted-foreground font-semibold uppercase">
@@ -117,7 +117,7 @@ export const VisionSection = () => {
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                   aria-label="Ir a página sobre nosotros"
-                  className="w-12 h-12 rounded bg-primary hover:bg-primary/90 flex items-center justify-center text-primary-foreground shadow-md transition-all shrink-0"
+                  className="w-12 h-12 rounded-xl bg-primary hover:bg-primary/90 flex items-center justify-center text-primary-foreground shadow-md transition-all shrink-0"
                   onClick={() => window.location.href = '/nosotros/sobre-nosotros'}
                 >
                   <Play size={20} fill="currentColor" className="ml-0.5" aria-hidden="true" />

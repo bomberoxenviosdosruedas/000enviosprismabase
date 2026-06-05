@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Package, Truck, Clock, ShieldCheck, ChevronRight, LayoutGrid, Zap, Globe, MousePointer2 } from 'lucide-react';
+import { Package, Truck, Clock, ChevronRight, Zap, Globe } from 'lucide-react';
 import Link from 'next/link';
 import { cn } from "@/lib/utils";
 
@@ -92,14 +92,14 @@ export default function SliderServicios() {
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: idx * 0.1, ease: [0.16, 1, 0.3, 1] }}
               whileHover={{ y: -10 }}
-              className="group p-6 md:p-8 rounded-lg bg-card border border-outline-variant hover:border-primary/40 transition-all duration-500 relative overflow-hidden flex flex-col min-h-[420px] h-auto shadow-md hover:shadow-lg"
+              className="group p-6 md:p-8 rounded-3xl bg-card border border-outline-variant hover:border-primary/40 transition-all duration-500 relative overflow-hidden flex flex-col min-h-[420px] h-auto shadow-md hover:shadow-lg"
             >
               {/* Internal Accent Light */}
               <div className="absolute top-0 right-0 w-32 h-32 bg-primary-container/5 blur-[40px] rounded-full group-hover:bg-primary/5 transition-all duration-700" />
 
               <div
                 className={cn(
-                  "w-12 h-12 rounded flex items-center justify-center mb-8 transition-all duration-500 group-hover:scale-110 group-hover:rotate-6 shadow-sm border",
+                  "w-12 h-12 rounded-xl flex items-center justify-center mb-8 transition-all duration-500 group-hover:scale-110 group-hover:rotate-6 shadow-sm border",
                   service.theme.bg,
                   service.theme.text,
                   service.theme.border

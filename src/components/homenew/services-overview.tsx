@@ -183,7 +183,7 @@ export const ServicesOverview = () => {
                 variants={itemVariants}
                 whileHover={{ y: -10, transition: { duration: 0.3 } }}
                 className={cn(
-                  "group p-6 lg:p-10 transition-all duration-500 flex flex-col justify-between relative overflow-hidden rounded-lg",
+                  "group p-6 lg:p-10 transition-all duration-500 flex flex-col justify-between relative overflow-hidden rounded-3xl",
                   theme.card,
                   service.className
                 )}
@@ -196,10 +196,10 @@ export const ServicesOverview = () => {
 
                 <div className="relative z-10">
                   <div className={cn(
-                    "w-12 h-12 lg:w-16 lg:h-16 rounded flex items-center justify-center mb-6 lg:mb-10 transition-all duration-500 group-hover:scale-110 group-hover:rotate-6",
+                    "w-12 h-12 lg:w-16 lg:h-16 rounded-xl flex items-center justify-center mb-6 lg:mb-10 transition-all duration-500 group-hover:scale-110 group-hover:rotate-6",
                     theme.icon
                   )}>
-                    {React.cloneElement(service.icon as React.ReactElement<any>, { size: service.theme === 'express' ? 32 : 28 })}
+                    {React.cloneElement(service.icon as React.ReactElement<{ size?: number }>, { size: service.theme === 'express' ? 32 : 28 })}
                   </div>
 
                   <h3 className={cn("text-headline-md mb-1 uppercase font-semibold", theme.text)}>
@@ -222,7 +222,7 @@ export const ServicesOverview = () => {
                   </Link>
 
                   {service.badge && (
-                    <div className={cn("hidden md:flex items-center gap-2 px-3 py-1.5 rounded-sm text-[9px] font-black tracking-widest uppercase border", theme.badge)}>
+                    <div className={cn("hidden md:flex items-center gap-2 px-3 py-1.5 rounded-md text-[9px] font-black tracking-widest uppercase border", theme.badge)}>
                       {service.badge}
                     </div>
                   )}

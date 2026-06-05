@@ -1,3 +1,5 @@
+@import "../../design-system/tokens.css";
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -9,8 +11,9 @@
     /* Typography (families loaded via layout.tsx) */
     --font-sans: var(--font-inter), sans-serif;
     --font-display: var(--font-montserrat), sans-serif;
+    --font-orbitron-font: var(--font-orbitron), sans-serif;
     --font-body: var(--font-sans);
-    --font-heading: var(--font-display);
+    --font-heading: var(--font-orbitron-font);
 
     /* Surfaces */
     --background: #f7f9fb;

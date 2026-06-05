@@ -26,3 +26,12 @@ Database helper scripts are added to `package.json`:
 - `db:seed`
 
 The starter page in `src/app/page.tsx` reads from a basic `User` model so you can verify queries quickly, and `prisma/seed.ts` inserts starter users.
+
+## Documentation
+
+Comprehensive documentation is available in the `docs/` directory:
+
+- [**API Reference**](./docs/API.md) - Documentation for Server Actions and AI Flows.
+- [**Architecture**](./docs/ARCHITECTURE.md) - Technical stack and system workflows.
+- [**Data Model**](./docs/DATA_MODEL.md) - Entity definitions and relationships.
+- [**User Guide**](./docs/USER_GUIDE.md) - Functional overview of the platform.

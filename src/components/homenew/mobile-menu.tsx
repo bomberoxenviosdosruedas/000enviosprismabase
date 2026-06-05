@@ -188,19 +188,19 @@ export function MobileMenu({ navGroups }: MobileMenuProps) {
                 <Link href="/cotizar/express" className="block w-full">
                   <Button
                     size="lg"
-                    className="w-full h-16 bg-secondary hover:bg-secondary/90 text-black font-display text-orbitron font-black rounded-2xl shadow-xl shadow-secondary/20 uppercase tracking-tighter"
+                    className="w-full h-16 bg-secondary hover:bg-secondary/90 text-black font-display text-orbitron font-black rounded-2xl shadow-xl shadow-secondary/20 uppercase tracking-tighter active:scale-[0.95] transition-transform"
                   >
-                    <CalculatorIcon className="w-5 h-5 mr-3" />
+                    <CalculatorIcon className="w-6 h-6 mr-3" />
                     Cotizar Envío
                   </Button>
                 </Link>
               </SheetClose>
               <div className="mt-6 flex items-center justify-center gap-6">
-                <Link href="https://instagram.com/enviosdosruedas" aria-label="Visitar nuestro Instagram" className="w-12 h-12 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-gray-400 hover:text-white transition-all">
-                  <InstagramIcon className="w-5 h-5" />
+                <Link href="https://instagram.com/enviosdosruedas" aria-label="Visitar nuestro Instagram" className="w-14 h-14 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-gray-400 hover:text-white transition-all active:scale-[0.95]">
+                  <InstagramIcon className="w-6 h-6" />
                 </Link>
-                <a href="tel:+5492236602699" aria-label="Llamar a Envios DosRuedas" className="w-12 h-12 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-secondary hover:bg-white/10 transition-all">
-                  <Phone className="w-5 h-5" />
+                <a href="tel:+5492236602699" aria-label="Llamar a Envios DosRuedas" className="w-14 h-14 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-secondary hover:bg-white/10 transition-all active:scale-[0.95]">
+                  <Phone className="w-6 h-6" />
                 </a>
               </div>
             </motion.div>

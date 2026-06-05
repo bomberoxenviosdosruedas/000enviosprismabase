@@ -103,12 +103,12 @@ const config: Config = {
         "spin-slow": "spin-slow 8s linear infinite",
       },
       fontFamily: {
-        sans: ["var(--font-roboto)", "sans-serif"],
+        sans: ["var(--font-inter)", "sans-serif"],
         display: ["var(--font-orbitron)", "monospace"],
       },
     },
   },
-  plugins: [require("tailwindcss-animate")],
+  plugins: [require("tailwindcss-animate")], // eslint-disable-line @typescript-eslint/no-require-imports
 } satisfies Config
 
 export default config

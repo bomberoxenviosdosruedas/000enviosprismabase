@@ -34,7 +34,7 @@ export const Footer = () => {
 
           {/* Brand Identity */}
           <div className="lg:col-span-4">
-            <Link href="/" className="flex items-center gap-3 sm:gap-4 mb-8 sm:mb-10 group shrink-0" aria-label="Volver al inicio desde el pie de página">
+            <Link href="/" className="flex items-center gap-3 sm:gap-4 mb-8 sm:mb-10 group shrink-0 active:scale-[0.98] transition-transform" aria-label="Volver al inicio desde el pie de página">
               <div className="relative w-12 h-12 sm:w-14 sm:h-14 rounded-xl flex items-center justify-center shrink-0 transition-all group-hover:rotate-6 group-hover:scale-110 drop-shadow-[0_0_10px_rgba(37,99,235,0.4)]">
                 <Image src="/LogoEnviosDosRuedas.webp" alt="Logo Dos Ruedas" fill className="object-contain" sizes="(max-width: 640px) 48px, 56px" />
               </div>
@@ -53,10 +53,10 @@ export const Footer = () => {
 
             <FooterSocialLinks
               links={[
-                { icon: "/icons/instagram.svg", href: "https://instagram.com/enviosdosruedas", label: "Instagram en el pie de página" },
-                { icon: "/icons/facebook.svg", href: "https://facebook.com/enviosdosruedas", label: "Facebook en el pie de página" },
-                { icon: "/icons/whatsapp.svg", href: "https://wa.me/542236602699", label: "WhatsApp en el pie de página" },
-                { icon: "/icons/google.svg", href: "#", label: "Google en el pie de página" }
+                { icon: "/icons/instagram.svg", href: "https://instagram.com/enviosdosruedas", label: "Instagram" },
+                { icon: "/icons/facebook.svg", href: "https://facebook.com/enviosdosruedas", label: "Facebook" },
+                { icon: "/icons/whatsapp.svg", href: "https://wa.me/542236602699", label: "WhatsApp" },
+                { icon: "/icons/google.svg", href: "#", label: "Google" }
               ]}
             />
           </div>

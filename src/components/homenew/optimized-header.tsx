@@ -69,7 +69,7 @@ export const OptimizedHeader = () => {
 
       {/* Right side Hub - RSC & Client Components */}
       <div className="flex items-center gap-4">
-        <a href="tel:+5492236602699" aria-label="Llamar al +54 223 660-2699" className="hidden xl:flex items-center gap-3 px-5 py-2.5 rounded-full glass-card text-white text-xxs font-black tracking-[0.2em] hover:text-primary hover:bg-white/10 transition-all uppercase">
+        <a href="tel:+5492236602699" aria-label="Llamar al +54 223 660-2699" className="hidden xl:flex items-center gap-3 px-5 py-2.5 rounded-full glass-card text-white text-xxs font-black tracking-[0.2em] hover:text-primary hover:bg-white/10 transition-all uppercase active:scale-[0.95]">
           <Phone size={14} className="text-secondary animate-pulse" aria-hidden="true" /> +54 223 660-2699
         </a>
 

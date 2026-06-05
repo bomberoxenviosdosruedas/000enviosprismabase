@@ -73,41 +73,41 @@ export const ServicesOverview = () => {
       title: "Envíos Express",
       bajada: "Prioridad absoluta y certeza total.",
       desc: <>Diseñado para operaciones de alta criticidad horaria. <span className="font-bold">Vos elegís el rango exacto</span> de entrega con solo 2 horas de anticipación.</>,
-      icon: <Zap />,
+      icon: <Zap strokeWidth={1.5} />,
       href: "/servicios/envios-express",
       buttonText: "Solicitar Express",
       badge: "ALTA PRIORIDAD",
-      className: "md:col-span-2 md:row-span-1"
+      className: "lg:col-span-2 lg:row-span-2"
+    },
+    {
+      theme: "meli",
+      title: "Envíos Flex",
+      bajada: "Reputación al máximo.",
+      desc: <>Somos expertos en MercadoLibre. Cumplimos tus <span className="font-bold">SLAs Same-Day</span>.</>,
+      icon: <Package strokeWidth={1.5} />,
+      href: "/servicios/enviosflex",
+      buttonText: "Activar Flex",
+      className: "lg:col-span-2 lg:row-span-1"
     },
     {
       theme: "lowcost",
       title: "Envíos LowCost",
       bajada: "Rentabilidad y ruteo masivo.",
-      desc: <>Variabilizá tus costos logísticos. <span className="font-bold">Ingresá tus pedidos</span> antes de las 13:00 hs y garantizamos entrega en el día.</>,
-      icon: <Clock />,
+      desc: <>Garantizamos entrega en el día.</>,
+      icon: <Clock strokeWidth={1.5} />,
       href: "/servicios/envios-lowcost",
-      buttonText: "Ahorrá con LowCost",
-      className: "md:col-span-2 md:row-span-1"
-    },
-    {
-      theme: "meli",
-      title: "Envíos Flex (MercadoLibre)",
-      bajada: "Potenciá tu reputación al máximo.",
-      desc: <>Somos expertos en MercadoLibre. Cumplimos tus <span className="font-bold">acuerdos de nivel de servicio (SLAs) Same-Day</span> para que tu termómetro esté en verde.</>,
-      icon: <Package />,
-      href: "/servicios/enviosflex",
-      buttonText: "Activar Envíos Flex",
-      className: "md:col-span-2 md:row-span-1"
+      buttonText: "Ahorrá",
+      className: "lg:col-span-1 lg:row-span-1"
     },
     {
       theme: "ecommerce",
       title: "E-Commerce & 3PL",
-      bajada: "Tercerización y cuentas corrientes.",
-      desc: <>Más que un envío, somos tu depósito. <span className="font-bold">Soluciones escalables</span> para PyMEs con facturación mensual centralizada.</>,
-      icon: <Truck />,
+      bajada: "Tercerización y cuentas.",
+      desc: <>Soluciones escalables para PyMEs.</>,
+      icon: <Truck strokeWidth={1.5} />,
       href: "/servicios/plan-emprendedores",
-      buttonText: "Hablar con un asesor",
-      className: "md:col-span-2 md:row-span-1"
+      buttonText: "Asesorarse",
+      className: "lg:col-span-1 lg:row-span-1"
     }
   ];
 
@@ -199,7 +199,7 @@ export const ServicesOverview = () => {
                     "w-12 h-12 lg:w-16 lg:h-16 rounded-xl lg:rounded-2xl flex items-center justify-center mb-6 lg:mb-10 transition-all duration-500 group-hover:scale-110 group-hover:rotate-6",
                     theme.icon
                   )}>
-                    {React.cloneElement(service.icon as React.ReactElement<any>, { size: 28 })}
+                    {React.cloneElement(service.icon as React.ReactElement<any>, { size: service.theme === 'express' ? 32 : 28 })}
                   </div>
 
                   <h3 className={cn("text-headline-md mb-1 uppercase", theme.text)}>

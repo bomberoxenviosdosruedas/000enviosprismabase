@@ -1,13 +1,12 @@
 import type { Metadata, Viewport } from "next";
-import { Roboto, Orbitron } from "next/font/google";
+import { Inter, Orbitron } from "next/font/google";
 import { Toaster } from "@/components/ui/toaster";
 import { WhatsAppReviewButton } from "@/components/seo/WhatsAppReviewButton";
 import "./globals.css";
 
-const roboto = Roboto({
+const inter = Inter({
   subsets: ["latin"],
-  weight: ["400", "500", "700"],
-  variable: "--font-roboto",
+  variable: "--font-inter",
   display: 'swap',
 });
 
@@ -150,7 +149,7 @@ export default function RootLayout({
         />
       </head>
       <body
-        className={`${roboto.variable} ${orbitron.variable} font-sans antialiased`}
+        className={`${inter.variable} ${orbitron.variable} font-sans antialiased`}
       >
         {children}
         <WhatsAppReviewButton />

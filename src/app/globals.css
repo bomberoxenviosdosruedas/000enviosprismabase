@@ -4,9 +4,9 @@
 
 @layer base {
   :root {
-    --font-roboto: var(--font-sans-fallback);
+    --font-inter: var(--font-sans-fallback);
     --font-orbitron: var(--font-display-fallback);
-    --font-sans: var(--font-roboto);
+    --font-sans: var(--font-inter);
     --font-display: var(--font-orbitron);
 
     --background: 0 0% 100%;
@@ -17,7 +17,7 @@
     --popover-foreground: 222.2 84% 4.9%;
     --primary: 221.2 83.2% 53.3%;
     --primary-foreground: 210 40% 98%;
-    --secondary: 45 93% 47%;
+    --secondary: 43 96% 56%;
     --secondary-foreground: 26 83% 14%;
     --muted: 210 40% 96.1%;
     --muted-foreground: 215.4 16.3% 46.9%;
@@ -40,7 +40,7 @@
     --popover-foreground: 210 40% 98%;
     --primary: 217.2 91.2% 59.8%;
     --primary-foreground: 222.2 47.4% 11.2%;
-    --secondary: 45 93% 47%;
+    --secondary: 43 96% 56%;
     --secondary-foreground: 26 83% 14%;
     --muted: 217.2 32.6% 17.5%;
     --muted-foreground: 215 20.2% 65.1%;

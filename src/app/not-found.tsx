@@ -1,9 +1,10 @@
+"use client"
+
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { OptimizedHeader } from "@/components/homenew/optimized-header"
 import { CarruselRedes } from "@/components/homenew/carrusel-redes"
 import { Footer } from "@/components/homenew/footer"
-import { NotFoundIllustration } from "@/components/error/not-found-illustration"
 import { Home, ArrowLeft } from "lucide-react"
 
 export default function NotFound() {
@@ -13,7 +14,9 @@ export default function NotFound() {
       <main className="flex-grow">
         <section className="py-20 px-4">
           <div className="container mx-auto text-center">
-            <NotFoundIllustration />
+            <div className="flex justify-center mb-8">
+               <div className="text-8xl font-bold text-blue-600 opacity-20">404</div>
+            </div>
 
             <div className="mt-8 max-w-2xl mx-auto">
               <h1 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Esta página se perdió</h1>
@@ -29,11 +32,9 @@ export default function NotFound() {
                   </Link>
                 </Button>
 
-                <Button asChild variant="outline" size="lg">
-                  <Link href="javascript:history.back()">
+                <Button variant="outline" size="lg" onClick={() => typeof window !== 'undefined' && window.history.back()}>
                     <ArrowLeft className="w-5 h-5 mr-2" />
                     Volver Atrás
-                  </Link>
                 </Button>
               </div>
             </div>

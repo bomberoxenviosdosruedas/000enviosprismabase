@@ -13,7 +13,7 @@ export const metadata: Metadata = {
 };
 
 import dynamic from "next/dynamic"
-import { OptimizedHeader } from "@/components/homenew/optimized-header"
+import { OptimizedHeader } from "@/components/homenew/OptimizedHeader"
 import HeroAnimado from "@/components/homenew/hero-animado"
 
 // Paso 2: Lazy Loading de Componentes (Code Splitting)
@@ -44,7 +44,7 @@ const CarruselRedes = dynamic(() => import("@/components/homenew/carrusel-redes"
   ssr: true
 })
 
-const Footer = dynamic(() => import("@/components/homenew/footer").then(mod => mod.Footer), {
+const Footer = dynamic(() => import("@/components/homenew/Footer").then(mod => mod.Footer), {
   ssr: true
 })
 

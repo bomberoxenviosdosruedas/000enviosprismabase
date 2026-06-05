@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
-import { OptimizedHeader } from "@/components/homenew/optimized-header";
+import { OptimizedHeader } from "@/components/homenew/OptimizedHeader";
 import { CarruselRedes } from "@/components/homenew/carrusel-redes";
-import { Footer } from "@/components/homenew/footer";
+import { Footer } from "@/components/homenew/Footer";
 import { ContactPageClient } from "@/components/contact/contact-page-client";
 
 export const metadata: Metadata = {

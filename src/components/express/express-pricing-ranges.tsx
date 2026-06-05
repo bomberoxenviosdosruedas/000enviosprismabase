@@ -6,7 +6,7 @@ import { Button } from "@/components/ui/button";
 import { MapPin, ArrowRightCircle, Calculator, AlertTriangle, CheckCircle2 } from "lucide-react";
 import Link from "next/link";
 import { motion } from "framer-motion";
-import type { PriceRange } from '../../../generated/prisma/client/client';
+import type { PriceRange } from '../../../generated/prisma/browser';
 import {
   Accordion,
   AccordionContent,

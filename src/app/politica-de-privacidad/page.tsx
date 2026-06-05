@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
-import { OptimizedHeader } from "@/components/homenew/optimized-header";
+import { OptimizedHeader } from "@/components/homenew/OptimizedHeader";
 import { CarruselRedes } from "@/components/homenew/carrusel-redes";
-import { Footer } from "@/components/homenew/footer";
+import { Footer } from "@/components/homenew/Footer";
 import { HeroSection } from "@/components/ui/HeroSection";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Shield, FileText } from "lucide-react";

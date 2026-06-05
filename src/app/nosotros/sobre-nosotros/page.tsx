@@ -1,4 +1,4 @@
-import { OptimizedHeader } from "@/components/homenew/optimized-header"
+import { OptimizedHeader } from "@/components/homenew/OptimizedHeader"
 import { AboutHero } from "@/components/about/about-hero"
 import { WhoWeAre } from "@/components/about/who-we-are"
 import { CompanyValues } from "@/components/about/company-values"
@@ -6,7 +6,7 @@ import { CompanyStory } from "@/components/about/company-story"
 import { TeamSection } from "@/components/about/team-section"
 import { MissionVision } from "@/components/about/mission-vision"
 import { CarruselRedes } from "@/components/homenew/carrusel-redes"
-import { Footer } from "@/components/homenew/footer"
+import { Footer } from "@/components/homenew/Footer"
 import type { Metadata } from "next"
 
 export const metadata: Metadata = {

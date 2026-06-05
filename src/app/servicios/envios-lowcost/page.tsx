@@ -1,4 +1,4 @@
-import { OptimizedHeader } from "@/components/homenew/optimized-header"
+import { OptimizedHeader } from "@/components/homenew/OptimizedHeader"
 import { LowcostHero } from "@/components/lowcost/lowcost-hero"
 import { LowcostContent } from "@/components/lowcost/lowcost-content"
 import { PricingComparison } from "@/components/lowcost/pricing-comparison"
@@ -6,10 +6,10 @@ import { LowcostBenefits } from "@/components/lowcost/lowcost-benefits"
 import { HowLowcostWorks } from "@/components/lowcost/how-lowcost-works"
 import { LowcostCta } from "@/components/lowcost/lowcost-cta"
 import { CarruselRedes } from "@/components/homenew/carrusel-redes"
-import { Footer } from "@/components/homenew/footer"
+import { Footer } from "@/components/homenew/Footer"
 import type { Metadata } from "next"
 import prisma from "@/lib/prisma";
-import { ServiceTypeEnum } from '../../../../generated/prisma/client/client';
+import { ServiceTypeEnum } from '../../../../generated/prisma/client';
 import type { PriceRangeClient } from "@/components/lowcost/pricing-comparison";
 
 export const metadata: Metadata = {

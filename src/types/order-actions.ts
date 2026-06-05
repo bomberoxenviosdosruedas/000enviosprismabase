@@ -1,5 +1,4 @@
 // src/types/order-actions.ts
-import type { Client, Prisma, ServiceTypeEnum as PrismaServiceTypeEnum } from '../../generated/prisma/client/client';
 import type { z } from 'zod';
 
 // --- Types for searchClientByPhone ---
@@ -8,7 +7,7 @@ export interface ClientSearchInput {
 }
 export interface ClientSearchResult {
   success: boolean;
-  data?: Client | null; // Client type is from Prisma
+  data?: any;
   error?: string;
   message?: string; 
   fieldErrors?: z.ZodIssue[];
@@ -24,7 +23,7 @@ export interface RegisterClientInput {
 }
 export interface RegisterClientResult {
   success: boolean;
-  data?: Client; // Client type is from Prisma
+  data?: any;
   error?: string;
   fieldErrors?: z.ZodIssue[];
 }
@@ -33,7 +32,7 @@ export interface RegisterClientResult {
 export interface QuoteShipmentInput {
   originAddress: string;
   destinationAddress: string;
-  serviceType: PrismaServiceTypeEnum; 
+  serviceType: any;
 }
 export interface QuoteDetails {
   price: number | null; 
@@ -52,8 +51,6 @@ export interface QuoteShipmentResult {
 }
 
 // --- Types for saveShipment ---
-// Input now expects numbers for prices and coordinates, matching Zod schema.
-// The Server Action will handle conversion to Decimal for Prisma.
 export interface SaveShipmentInput {
   clientId?: number; 
 
@@ -70,7 +67,7 @@ export interface SaveShipmentInput {
   destinationLat: number; 
   destinationLng: number; 
   
-  serviceType: PrismaServiceTypeEnum; 
+  serviceType: any;
   quotedPrice: number; 
   distanceText?: string;
   durationText?: string;

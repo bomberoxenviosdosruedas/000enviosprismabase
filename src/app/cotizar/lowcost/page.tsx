@@ -1,8 +1,8 @@
 
 import type { Metadata } from 'next';
-import { OptimizedHeader } from "@/components/homenew/optimized-header";
+import { OptimizedHeader } from "@/components/homenew/OptimizedHeader";
 import { CarruselRedes } from "@/components/homenew/carrusel-redes";
-import { Footer } from "@/components/homenew/footer";
+import { Footer } from "@/components/homenew/Footer";
 import LowCostCalculatorHero from '@/components/calculator/lowcost-calculator-hero';
 import LowCostCalculator from '@/components/calculator/lowcost-calculator';
 import MapFeatures from '@/components/calculator/map-features';

@@ -6,7 +6,7 @@ import { Button } from "@/components/ui/button";
 import { Coins, ArrowRightCircle, HelpCircle } from "lucide-react";
 import Image from "next/image";
 import { motion } from "framer-motion";
-import type { PriceRange } from '../../../generated/prisma/client/client';
+import type { PriceRange } from '../../../generated/prisma/browser';
 
 export type PriceRangeClient = Omit<PriceRange, 'distanciaMinKm' | 'distanciaMaxKm' | 'precioRango'> & {
   distanciaMinKm: number;

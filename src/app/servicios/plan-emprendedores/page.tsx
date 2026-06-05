@@ -1,14 +1,14 @@
-import { OptimizedHeader } from "@/components/homenew/optimized-header"
+import { OptimizedHeader } from "@/components/homenew/OptimizedHeader"
 import { EntrepreneurHero } from "@/components/entrepreneur/entrepreneur-hero"
 import { PlanInformation } from "@/components/entrepreneur/plan-information"
 import { EntrepreneurBenefits } from "@/components/entrepreneur/entrepreneur-benefits"
 import { EntrepreneurPricingRanges } from "@/components/entrepreneur/entrepreneur-pricing-ranges"
 import { EntrepreneurCta } from "@/components/entrepreneur/entrepreneur-cta"
 import { CarruselRedes } from "@/components/homenew/carrusel-redes"
-import { Footer } from "@/components/homenew/footer"
+import { Footer } from "@/components/homenew/Footer"
 import type { Metadata } from "next"
 import prisma from "@/lib/prisma";
-import { ServiceTypeEnum } from '../../../../generated/prisma/client/client';
+import { ServiceTypeEnum } from '../../../../generated/prisma/client';
 import type { PriceRangeClient } from "@/components/entrepreneur/entrepreneur-pricing-ranges";
 
 export const metadata: Metadata = {

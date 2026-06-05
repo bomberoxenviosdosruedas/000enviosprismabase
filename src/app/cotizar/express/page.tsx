@@ -1,8 +1,8 @@
 
 import type { Metadata } from 'next';
-import { OptimizedHeader } from "@/components/homenew/optimized-header";
+import { OptimizedHeader } from "@/components/homenew/OptimizedHeader";
 import { CarruselRedes } from "@/components/homenew/carrusel-redes";
-import { Footer } from "@/components/homenew/footer";
+import { Footer } from "@/components/homenew/Footer";
 import CalculatorHero from '@/components/calculator/calculator-hero';
 import ExpressCalculator from '@/components/calculator/express-calculator';
 import PricingInfo from '@/components/calculator/pricing-info';

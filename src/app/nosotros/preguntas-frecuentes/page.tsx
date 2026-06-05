@@ -1,9 +1,9 @@
-import { OptimizedHeader } from "@/components/homenew/optimized-header"
+import { OptimizedHeader } from "@/components/homenew/OptimizedHeader"
 import { FaqHero } from "@/components/faq/faq-hero"
 import { FaqCategories } from "@/components/faq/faq-categories"
 import { FaqContactCta } from "@/components/faq/faq-contact-cta"
 import { CarruselRedes } from "@/components/homenew/carrusel-redes"
-import { Footer } from "@/components/homenew/footer"
+import { Footer } from "@/components/homenew/Footer"
 import type { Metadata } from "next"
 
 export const metadata: Metadata = {

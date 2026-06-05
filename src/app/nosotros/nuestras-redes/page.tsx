@@ -1,11 +1,11 @@
 // src/app/nosotros/nuestras-redes/page.tsx
-import { OptimizedHeader } from "@/components/homenew/optimized-header";
+import { OptimizedHeader } from "@/components/homenew/OptimizedHeader";
 import { SocialHero } from "@/components/social/social-hero";
 import { SocialConnect } from "@/components/social/social-connect";
 import { SocialBenefits } from "@/components/social/social-benefits";
 import { SocialFeed } from "@/components/social/social-feed";
 import { NewsletterSignup } from "@/components/social/newsletter-signup";
-import { Footer } from "@/components/homenew/footer";
+import { Footer } from "@/components/homenew/Footer";
 import { getAllPosts } from "@/lib/social/posts";
 import type { Metadata } from "next";
 import { CarruselRedes } from "@/components/homenew/carrusel-redes";

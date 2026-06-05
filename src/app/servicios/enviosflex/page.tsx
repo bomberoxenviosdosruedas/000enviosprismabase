@@ -1,4 +1,4 @@
-import { OptimizedHeader } from "@/components/homenew/optimized-header"
+import { OptimizedHeader } from "@/components/homenew/OptimizedHeader"
 import { EnviosFlexHero } from "@/components/envios-flex/envios-flex-hero"
 import { EnviosFlexContent } from "@/components/envios-flex/envios-flex-content"
 import { MercadoLibreBenefits } from "@/components/envios-flex/mercadolibre-benefits"
@@ -7,10 +7,10 @@ import { HowItWorks } from "@/components/envios-flex/how-it-works"
 import { Requirements } from "@/components/envios-flex/requirements"
 import { EnviosFlexCta } from "@/components/envios-flex/envios-flex-cta"
 import { CarruselRedes } from "@/components/homenew/carrusel-redes"
-import { Footer } from "@/components/homenew/footer"
+import { Footer } from "@/components/homenew/Footer"
 import type { Metadata } from "next"
 import prisma from "@/lib/prisma";
-import { ServiceTypeEnum } from '../../../../generated/prisma/client/client';
+import { ServiceTypeEnum } from '../../../../generated/prisma/client';
 import type { PriceRangeClient } from "@/components/envios-flex/flex-pricing-ranges";
 
 export const metadata: Metadata = {

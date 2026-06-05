@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
-import { OptimizedHeader } from "@/components/homenew/optimized-header";
+import { OptimizedHeader } from "@/components/homenew/OptimizedHeader";
 import { CarruselRedes } from "@/components/homenew/carrusel-redes";
-import { Footer } from "@/components/homenew/footer";
+import { Footer } from "@/components/homenew/Footer";
 import { ExpressPageClient } from "@/components/express/express-page-client";
 import prisma from "@/lib/prisma";
-import { ServiceTypeEnum } from '../../../../generated/prisma/client/client';
+import { ServiceTypeEnum } from '../../../../generated/prisma/client';
 import type { PriceRangeClient } from "@/components/express/express-pricing-ranges";
 
 export const metadata: Metadata = {

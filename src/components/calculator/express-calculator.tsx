@@ -126,7 +126,6 @@ export default function ExpressCalculator() {
                             onChange={setOrigin}
                             required
                             className="bg-background/50 border-border focus-visible:ring-primary h-12 rounded-xl"
-                            label="Dirección de Origen"
                           />
                         </div>
                         <div className="space-y-2">
@@ -140,7 +139,6 @@ export default function ExpressCalculator() {
                             onChange={setDestination}
                             required
                             className="bg-background/50 border-border focus-visible:ring-primary h-12 rounded-xl"
-                            label="Dirección de Destino"
                           />
                         </div>
                       </div>

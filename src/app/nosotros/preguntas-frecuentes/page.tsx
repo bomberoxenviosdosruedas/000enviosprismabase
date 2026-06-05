@@ -49,7 +49,7 @@ export default function FaqPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
       <OptimizedHeader />
-      <main>
+      <main className="flex-grow">
         <FaqHero />
         <FaqCategories />
         <FaqContactCta />

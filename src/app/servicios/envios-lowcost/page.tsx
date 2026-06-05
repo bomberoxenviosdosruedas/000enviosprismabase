@@ -57,7 +57,7 @@ export default async function EnviosLowCostPage() {
   return (
     <div className="dark min-h-screen flex flex-col bg-background text-foreground selection:bg-primary/30">
       <OptimizedHeader />
-      <main>
+      <main className="flex-grow">
         <LowcostHero />
         <LowcostContent />
         <PricingComparison priceRanges={priceRanges} />

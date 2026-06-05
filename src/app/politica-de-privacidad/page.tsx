@@ -66,7 +66,7 @@ export default function PoliticaDePrivacidadPage() {
   ];
 
   return (
-    <div className="flex flex-col min-h-screen bg-gray-50 dark:bg-gray-900">
+    <div className="dark min-h-screen flex flex-col bg-background text-foreground selection:bg-primary/30">
       <OptimizedHeader />
       <main className="flex-grow">
         <HeroSection
@@ -77,16 +77,15 @@ export default function PoliticaDePrivacidadPage() {
           }
           title={<span className="text-primary">Política de Privacidad</span>}
           description="En Envios DosRuedas, tu confianza es nuestra prioridad. Aquí te explicamos cómo protegemos y utilizamos tu información personal."
-          backgroundType="color"
-          backgroundColor="bg-gray-50 dark:bg-gray-900"
-          textColorClassName="text-foreground"
+          backgroundType="shader"
+          textColorClassName="text-white"
           minHeight="min-h-fit"
           className="py-12 md:py-16 font-sans"
-          titleClassName="text-3xl md:text-4xl font-bold font-display"
+          titleClassName="text-3xl md:text-4xl font-bold font-display uppercase tracking-tighter italic"
         />
 
         <div className="container mx-auto px-4 py-8 md:py-12 max-w-4xl">
-          <Card className="shadow-lg">
+          <Card className="shadow-2xl bg-card/60 border-border/50 backdrop-blur-xl rounded-3xl overflow-hidden border">
             <CardHeader>
                <CardTitle className="flex items-center gap-3 text-2xl font-display">
                  <FileText className="h-6 w-6 text-primary" />

@@ -57,7 +57,7 @@ export default async function EnviosFlexPage() {
   return (
     <div className="dark min-h-screen flex flex-col bg-background text-foreground selection:bg-primary/30">
       <OptimizedHeader />
-      <main>
+      <main className="flex-grow">
         <EnviosFlexHero />
         <EnviosFlexContent />
         <MercadoLibreBenefits />

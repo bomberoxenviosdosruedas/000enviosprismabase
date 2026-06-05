@@ -3,6 +3,7 @@ node_modules/
 /jspm_packages/
 .pnpm-store/
 pnpm-debug.log
+/generated/
 
 # Next.js build and development files
 .next/

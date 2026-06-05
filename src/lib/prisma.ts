@@ -1,10 +1,10 @@
 import "dotenv/config";
-import { PrismaClient } from "../../generated/prisma/client/client";
+import { PrismaClient } from "../../generated/prisma/client.ts";
 import { withAccelerate } from "@prisma/extension-accelerate";
 import { PrismaPg } from "@prisma/adapter-pg";
 import pg from "pg";
 
-const pool = new pg.Pool({ connectionString: process.env.DIRECT_URL });
+const pool = new pg.Pool({ connectionString: process.env.DATABASE_URL });
 const adapter = new PrismaPg(pool);
 
 const prismaClientSingleton = () => {

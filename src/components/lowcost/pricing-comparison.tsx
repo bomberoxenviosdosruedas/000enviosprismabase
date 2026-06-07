@@ -80,7 +80,7 @@ export function PricingComparison({ priceRanges }: PricingComparisonProps) {
               viewport={{ once: true }}
               transition={{ delay: index * 0.1 }}
             >
-              <Card className="relative bg-[#0a0d16]/60 border-white/10 backdrop-blur-md hover:border-primary/50 transition-all duration-300 rounded-3xl overflow-hidden h-full flex flex-col group">
+              <Card className="relative bg-[background]/60 border-white/10 backdrop-blur-md hover:border-primary/50 transition-all duration-300 rounded-3xl overflow-hidden h-full flex flex-col group">
                 <Badge className="absolute top-4 right-4 bg-primary/20 text-primary border-primary/30 py-1 px-3 rounded-full text-xxs font-bold uppercase tracking-widest">
                   Tarifa 2026
                 </Badge>
@@ -124,7 +124,7 @@ export function PricingComparison({ priceRanges }: PricingComparisonProps) {
           viewport={{ once: true }}
           className="mt-12"
         >
-          <Card className="bg-[#0a0d16]/60 border-white/10 backdrop-blur-md rounded-3xl overflow-hidden p-8 md:p-12">
+          <Card className="bg-[background]/60 border-white/10 backdrop-blur-md rounded-3xl overflow-hidden p-8 md:p-12">
             <div className="grid md:grid-cols-2 gap-12 items-center">
               <div>
                 <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-secondary/10 border border-secondary/20 text-secondary text-label-sm font-bold tracking-widest mb-6 uppercase">

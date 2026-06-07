@@ -35,7 +35,7 @@ export const CtaSection = () => {
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-          className="relative p-12 md:p-24 rounded-[60px] primary-gradient-bg overflow-hidden glow-blue group border border-white/10"
+          className="relative p-12 md:p-24 rounded-xl primary-gradient-bg overflow-hidden glow-blue group border border-white/10"
         >
           {/* Internal Glow Effects */}
           <div className="absolute -top-24 -right-24 w-96 h-96 bg-white/10 blur-[80px] rounded-full group-hover:bg-white/20 transition-all duration-1000" />

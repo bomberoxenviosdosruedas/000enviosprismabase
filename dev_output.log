@@ -1,0 +1,17 @@
+
+> 000enviosprismabase@0.1.0 dev /app
+> next dev
+
+▲ Next.js 16.2.4 (Turbopack)
+- Local:         http://localhost:3000
+- Network:       http://192.168.0.2:3000
+✓ Ready in 547ms
+
+
+warn - The class `duration-[3000ms]` is ambiguous and matches multiple utilities.
+warn - If this is content and not a class, replace it with `duration-&lsqb;3000ms&rsqb;` to silence this warning.
+○ Compiling / ...
+ HEAD / 200 in 8.8s (next.js: 8.0s, application-code: 786ms)
+ GET / 200 in 255ms (next.js: 10ms, application-code: 244ms)
+ GET / 200 in 187ms (next.js: 4ms, application-code: 182ms)
+ GET / 200 in 181ms (next.js: 6ms, application-code: 175ms)

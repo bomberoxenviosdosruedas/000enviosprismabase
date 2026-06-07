@@ -96,7 +96,7 @@ export const VisionSection = () => {
             style={{ scale, y }}
           >
             {/* Visual Glass Frame */}
-            <div className="relative aspect-[4/5] rounded-[60px] overflow-hidden group border border-white/10 shadow-[0_40px_100px_-20px_rgba(0,0,0,0.8)]">
+            <div className="relative aspect-[4/5] rounded-xl overflow-hidden group border border-white/10 shadow-[0_40px_100px_-20px_rgba(0,0,0,0.8)]">
               <Image
                 src="/hero/mapa_background.jpeg"
                 alt="Vanguardia Logística"
@@ -104,13 +104,13 @@ export const VisionSection = () => {
                 sizes="(max-width: 1024px) 100vw, 50vw"
                 className="object-cover transition-transform duration-[3000ms] group-hover:scale-110 filter brightness-90 contrast-110"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-[#0a0d16] via-transparent to-transparent opacity-90" />
+              <div className="absolute inset-0 bg-gradient-to-t from-[background] via-transparent to-transparent opacity-90" />
 
               {/* Animated Inner Glow */}
               <div className="absolute inset-0 bg-primary/10 opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none" />
 
               {/* Floating Interactive Hub */}
-              <div className="absolute bottom-10 left-8 right-8 p-10 rounded-[40px] bg-[#0a0d16]/40 backdrop-blur-3xl border border-white/10 flex items-center justify-between group-hover:bg-[#0a0d16]/60 transition-all duration-700 shadow-2xl">
+              <div className="absolute bottom-10 left-8 right-8 p-10 rounded-xl bg-[background]/40 backdrop-blur-3xl border border-white/10 flex items-center justify-between group-hover:bg-[background]/60 transition-all duration-700 shadow-2xl">
                 <div>
                   <h3 className="font-display text-orbitron text-2xl font-black text-white uppercase tracking-tight mb-2">Conocé más sobre nosotros</h3>
                   <div className="flex items-center gap-3 text-xxs text-blue-400 font-black tracking-[0.2em] uppercase">

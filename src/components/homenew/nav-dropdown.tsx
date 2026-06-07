@@ -42,7 +42,7 @@ export function NavDropdown({ group }: NavDropdownProps) {
           <CaretDown className="h-4 w-4 opacity-50" />
         </motion.div>
       </DropdownMenuTrigger>
-      <DropdownMenuContent className="mt-2 w-64 bg-[#0a0d16]/95 backdrop-blur-2xl border-white/10 text-white shadow-[0_20px_50px_-15px_rgba(0,0,0,0.8)] p-2">
+      <DropdownMenuContent className="mt-2 w-64 bg-[background]/95 backdrop-blur-2xl border-white/10 text-white shadow-[0_20px_50px_-15px_rgba(0,0,0,0.8)] p-2">
         {group.items.map((item: any) => {
           const ItemIcon = item.icon;
           return (

@@ -58,7 +58,7 @@ export function HeroVisuals() {
         }}
       >
         <div className="relative w-full max-w-[480px] aspect-[1.4/1] transform-gpu">
-          <div className="absolute inset-0 bg-primary/20 rounded-[40px] blur-[100px] scale-90 opacity-50" />
+          <div className="absolute inset-0 bg-primary/20 rounded-xl blur-[100px] scale-90 opacity-50" />
 
           <motion.div
             className="w-full h-full relative z-10"

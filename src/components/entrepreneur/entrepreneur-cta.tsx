@@ -15,7 +15,7 @@ export function EntrepreneurCta() {
 
       <div className="max-w-6xl mx-auto relative z-10">
         <motion.div
-          className="p-12 md:p-16 rounded-[40px] bg-gradient-to-br from-primary/10 via-[#0a0d16]/80 to-secondary/5 border border-white/10 backdrop-blur-xl relative overflow-hidden text-center"
+          className="p-12 md:p-16 rounded-xl bg-gradient-to-br from-primary/10 via-[background]/80 to-secondary/5 border border-white/10 backdrop-blur-xl relative overflow-hidden text-center"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}

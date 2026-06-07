@@ -51,7 +51,7 @@ const services = [
 
 export default function SliderServicios() {
   return (
-    <section className="relative min-h-[100dvh] flex items-center py-20 lg:py-32 px-4 bg-[#0a0d16] overflow-hidden">
+    <section className="relative min-h-[100dvh] flex items-center py-20 lg:py-32 px-4 bg-[background] overflow-hidden">
       {/* Tech lines background */}
       <div className="absolute inset-0 opacity-[0.05] pointer-events-none">
         <div className="absolute top-0 left-0 w-full h-full tech-grid-overlay" />
@@ -96,7 +96,7 @@ export default function SliderServicios() {
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: idx * 0.1, ease: [0.16, 1, 0.3, 1] }}
               whileHover={{ y: -12, scale: 1.02 }}
-              className="group p-6 md:p-10 rounded-[30px] md:rounded-[40px] bg-white/[0.03] border border-white/5 hover:border-white/20 transition-all duration-700 relative overflow-hidden flex flex-col min-h-[440px] h-auto backdrop-blur-xl shadow-2xl"
+              className="group p-6 md:p-10 rounded-xl md:rounded-xl bg-white/[0.03] border border-white/5 hover:border-white/20 transition-all duration-700 relative overflow-hidden flex flex-col min-h-[440px] h-auto backdrop-blur-xl shadow-2xl"
             >
               {/* Internal Accent Light */}
               <div className="absolute top-0 right-0 w-32 h-32 bg-white/[0.02] blur-[40px] rounded-full group-hover:bg-primary/10 transition-all duration-700" />
@@ -110,13 +110,13 @@ export default function SliderServicios() {
 
               <div className="mb-auto">
                 <div className="flex items-center gap-3 mb-4">
-                  <span className="text-[9px] font-black text-white/40 uppercase tracking-[0.3em]">{service.badge}</span>
+                  <span className="text-xxs font-black text-white/40 uppercase tracking-[0.3em]">{service.badge}</span>
                   <div className="h-px w-6 bg-white/10" />
                 </div>
                 <h3 className="font-display text-orbitron text-2xl font-black text-white mb-1 uppercase tracking-tight group-hover:text-primary transition-colors leading-tight">
                   {service.title}
                 </h3>
-                <p className="text-[10px] font-black uppercase tracking-[0.2em] mb-4" style={{ color: service.color }}>
+                <p className="text-xxs font-black uppercase tracking-[0.2em] mb-4" style={{ color: service.color }}>
                   {service.bajada}
                 </p>
                 <p className="text-gray-400 text-sm leading-relaxed font-[family-name:var(--font-roboto)] font-light">
@@ -154,15 +154,15 @@ export default function SliderServicios() {
           <div className="flex items-center gap-10">
             <div className="flex items-center gap-3 text-white/20">
               <Lightning size={14} />
-              <span className="text-[9px] font-black tracking-[0.5em] uppercase">MÁXIMO PODER</span>
+              <span className="text-xxs font-black tracking-[0.5em] uppercase">MÁXIMO PODER</span>
             </div>
             <div className="w-2 h-2 rounded-full bg-primary/20" />
             <div className="flex items-center gap-3 text-white/20">
               <Globe size={14} />
-              <span className="text-[9px] font-black tracking-[0.5em] uppercase">INFRAESTRUCTURA TOTAL</span>
+              <span className="text-xxs font-black tracking-[0.5em] uppercase">INFRAESTRUCTURA TOTAL</span>
             </div>
           </div>
-          <p className="text-gray-400 text-[8px] font-black uppercase tracking-[1em] text-center max-w-lg leading-loose opacity-50">
+          <p className="text-gray-400 text-xxs font-black uppercase tracking-[1em] text-center max-w-lg leading-loose opacity-50">
             ENGINEERING LOGISTICS FOR THE MODERN ERA OF COMMERCE IN MAR DEL PLATA
           </p>
         </motion.div>

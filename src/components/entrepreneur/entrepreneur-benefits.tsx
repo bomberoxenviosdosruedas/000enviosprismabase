@@ -20,7 +20,7 @@ function SuccessMetrics() {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ delay: index * 0.1 }}
-          className="text-center p-8 bg-surface rounded-lg border border-outline-variant backdrop-blur-sm"
+          className="text-center p-8 bg-[background]/60 rounded-3xl border border-white/10 backdrop-blur-sm"
         >
           <div className="text-display-md font-black text-primary font-display mb-2 italic">
             {metric.value}
@@ -102,7 +102,7 @@ export function EntrepreneurBenefits() {
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1, duration: 0.5 }}
               >
-                <Card className="h-full bg-surface-container border-outline-variant hover:border-primary/30 transition-all group backdrop-blur-sm rounded-lg overflow-hidden">
+                <Card className="h-full bg-[background]/60 border-white/10 hover:border-primary/30 transition-all group backdrop-blur-sm rounded-3xl overflow-hidden">
                   <CardContent className="p-10 relative">
                      <div className="absolute top-0 right-0 w-24 h-24 bg-on-surface/5 rotate-45 translate-x-12 -translate-y-12 group-hover:bg-primary/5 transition-colors" />
 

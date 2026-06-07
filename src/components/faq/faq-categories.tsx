@@ -125,7 +125,7 @@ export function FaqCategories() {
   const activeFaq = faqData.find((faq) => faq.category === activeCategory)
 
   return (
-    <section className="py-16 px-4 bg-[#030710]">
+    <section className="py-16 px-4 bg-[background]">
       <div className="container mx-auto max-w-6xl">
         {/* Category Buttons */}
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-16">
@@ -142,7 +142,7 @@ export function FaqCategories() {
                   "h-auto p-6 flex flex-col items-center space-y-4 transition-all duration-300 font-display rounded-xl",
                   isActive
                     ? "bg-primary hover:bg-primary/90 text-primary-foreground shadow-xl scale-105 border-primary"
-                    : "bg-[#0a0d16]/60 backdrop-blur-sm border-white/10 hover:bg-white/5 hover:border-primary/50 text-muted-foreground"
+                    : "bg-[background]/60 backdrop-blur-sm border-white/10 hover:bg-white/5 hover:border-primary/50 text-muted-foreground"
                 )}
               >
                 <div className={cn(

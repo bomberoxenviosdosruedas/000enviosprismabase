@@ -1,4 +1,5 @@
 import type { Config } from "tailwindcss"
+import animate from "tailwindcss-animate"
 
 const config: Config = {
   darkMode: ["class"],
@@ -46,12 +47,13 @@ const config: Config = {
           DEFAULT: '#fff9ef',
           foreground: '#3a3000',
         },
-        'on-secondary': '#3a3000',
-        'secondary-container': '#ffdb3c',
-        'on-secondary-container': '#725f00',
         tertiary: {
-          DEFAULT: '#00dbe9',
-          foreground: '#00363a',
+          DEFAULT: "hsl(var(--tertiary))",
+          foreground: "hsl(var(--tertiary-foreground))",
+        },
+        destructive: {
+          DEFAULT: "hsl(var(--destructive))",
+          foreground: "hsl(var(--destructive-foreground))",
         },
         'on-tertiary': '#00363a',
         'tertiary-container': '#005b61',
@@ -60,18 +62,19 @@ const config: Config = {
           DEFAULT: '#ffb4ab',
           foreground: '#690005',
         },
-        'error-container': '#93000a',
-        'on-error-container': '#ffdad6',
-        background: '#13131b',
-        'on-background': '#e4e1ed',
-        'surface-variant': '#34343d',
+        whatsapp: "hsl(var(--whatsapp))",
+        facebook: "hsl(var(--facebook))",
+        instagram: "hsl(var(--instagram))",
+      },
+      fontSize: {
+        xxs: "0.625rem",
       },
       borderRadius: {
-        sm: "0.125rem",
-        DEFAULT: "0.25rem",
-        md: "0.375rem",
-        lg: "0.5rem",
-        xl: "0.75rem",
+        xl: "0.75rem",    /* 12px */
+        lg: "0.5rem",     /* 8px */
+        md: "0.375rem",   /* 6px */
+        DEFAULT: "0.25rem", /* 4px */
+        sm: "0.125rem",   /* 2px */
         full: "9999px",
       },
       spacing: {
@@ -80,43 +83,23 @@ const config: Config = {
         "margin-desktop": "64px",
         "margin-mobile": "20px",
       },
-      keyframes: {
-        "accordion-down": {
-          from: { height: "0" },
-          to: { height: "var(--radix-accordion-content-height)" },
-        },
-        "accordion-up": {
-          from: { height: "var(--radix-accordion-content-height)" },
-          to: { height: "0" },
-        },
-        "h-scroll": {
-          "0%": { transform: "translateX(0)" },
-          "100%": { transform: "translateX(-50%)" },
-        },
-        float: {
-          "0%, 100%": { transform: "translateY(0px)" },
-          "50%": { transform: "translateY(-10px)" },
-        },
-        "spin-slow": {
-          from: { transform: "rotate(0deg)" },
-          to: { transform: "rotate(360deg)" },
-        },
-      },
-      animation: {
-        "accordion-down": "accordion-down 0.2s ease-out",
-        "accordion-up": "accordion-up 0.2s ease-out",
-        "h-scroll": "h-scroll 45s linear infinite",
-        float: "float 6s ease-in-out infinite",
-        "spin-slow": "spin-slow 8s linear infinite",
-      },
       fontFamily: {
-        sans: ["Hanken Grotesk", "sans-serif"],
-        display: ["Anybody", "sans-serif"],
-        mono: ["JetBrains Mono", "monospace"],
+        anybody: ["var(--font-anybody)", "sans-serif"],
+        hanken: ["var(--font-hanken)", "sans-serif"],
+        jetbrains: ["var(--font-jetbrains)", "monospace"],
+        sans: ["var(--font-hanken)", "sans-serif"],
+        display: ["var(--font-anybody)", "sans-serif"],
+      },
+      backgroundImage: {
+        "glow-conic": "conic-gradient(from 180deg at 50% 50%, #0022FF 0deg, #FFD700 180deg, #0022FF 360deg)",
+      },
+      boxShadow: {
+        "bloom-primary": "0 0 20px rgba(0, 34, 255, 0.15)",
+        "bloom-secondary": "0 0 20px rgba(255, 215, 0, 0.15)",
       },
     },
   },
-  plugins: [require("tailwindcss-animate")],
+  plugins: [animate],
 } satisfies Config
 
 export default config

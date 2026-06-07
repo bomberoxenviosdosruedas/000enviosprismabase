@@ -3,9 +3,50 @@
 @tailwind utilities;
 
 @layer base {
+  :root {
+    /* Base Colors from DESIGN.md */
+    --background: 240 17% 9%;    /* #13131b */
+    --foreground: 228 22% 91%;   /* #e4e1ed */
+
+    --primary: 228 100% 50%;     /* #0022FF - Electric Blue */
+    --primary-foreground: 228 22% 91%;
+
+    --secondary: 51 100% 50%;    /* #FFD700 - Cyber Gold */
+    --secondary-foreground: 240 17% 9%;
+
+    --tertiary: 184 100% 46%;    /* #00dbe9 - Neon Cyan */
+    --tertiary-foreground: 240 17% 9%;
+
+    /* Surface & Containers (Material 3 mappings) */
+    --card: 240 17% 9%;          /* surface */
+    --card-foreground: 228 22% 91%;
+
+    --popover: 240 17% 9%;       /* surface */
+    --popover-foreground: 228 22% 91%;
+
+    --muted: 240 11% 18%;        /* surface-container */
+    --muted-foreground: 240 14% 81%; /* on-surface-variant */
+
+    --accent: 228 100% 50%;      /* primary tint */
+    --accent-foreground: 228 22% 91%;
+
+    --destructive: 6 100% 83%;   /* error */
+    --destructive-foreground: 355 100% 21%;
+
+    --border: 240 11% 30%;       /* outline-variant */
+    --input: 240 11% 30%;
+    --ring: 228 100% 50%;
+
+    --radius: 0.25rem;           /* 4px base radius */
+    --whatsapp: 142 70% 49%;
+    --facebook: 214 89% 52%;
+    --instagram: 340 75% 54%;
+  }
+
   body {
-    background-color: #13131b;
-    color: #e4e1ed;
+    background-color: hsl(var(--background));
+    color: hsl(var(--foreground));
+    font-feature-settings: "rlig" 1, "calt" 1;
   }
 }
 
@@ -36,49 +77,75 @@ html {
 }
 
 @layer utilities {
+  /* Typography Scale from DESIGN.md */
   .text-display-lg {
-    font-family: 'Anybody', sans-serif;
-    font-size: 72px;
+    font-family: var(--font-anybody);
+    font-size: clamp(48px, 8vw, 72px);
     font-weight: 800;
     line-height: 1.1;
     letter-spacing: -0.02em;
   }
-  .text-display-lg-mobile {
-    font-family: 'Anybody', sans-serif;
-    font-size: 48px;
-    font-weight: 800;
-    line-height: 1.1;
-    letter-spacing: -0.02em;
-  }
+
   .text-headline-lg {
-    font-family: 'Anybody', sans-serif;
-    font-size: 40px;
+    font-family: var(--font-anybody);
+    font-size: clamp(32px, 5vw, 40px);
     font-weight: 700;
     line-height: 1.2;
   }
-  .text-headline-lg-mobile {
-    font-family: 'Anybody', sans-serif;
-    font-size: 32px;
-    font-weight: 700;
-    line-height: 1.2;
-  }
+
   .text-body-lg {
-    font-family: 'Hanken Grotesk', sans-serif;
+    font-family: var(--font-hanken);
     font-size: 18px;
     font-weight: 400;
     line-height: 1.6;
   }
+
   .text-body-md {
-    font-family: 'Hanken Grotesk', sans-serif;
+    font-family: var(--font-hanken);
     font-size: 16px;
     font-weight: 400;
     line-height: 1.6;
   }
+
   .text-label-md {
-    font-family: 'JetBrains Mono', monospace;
+    font-family: var(--font-jetbrains);
     font-size: 14px;
     font-weight: 500;
     line-height: 1.2;
     letter-spacing: 0.05em;
+    text-transform: uppercase;
+  }
+
+  /* Effects: Glassmorphism */
+  .glass-panel {
+    background: rgba(19, 19, 27, 0.7);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(0, 219, 233, 0.1);
+  }
+
+  /* Effects: Luminous Outer Glow (Bloom) */
+  .glow-primary {
+    box-shadow: 0 0 20px rgba(0, 34, 255, 0.15);
+  }
+
+  .glow-secondary {
+    box-shadow: 0 0 20px rgba(255, 215, 0, 0.15);
+  }
+
+  .print-only {
+    display: none;
+  }
+
+  @media print {
+    body {
+      background-color: white !important;
+      color: black !important;
+    }
+    .no-print {
+      display: none !important;
+    }
+    .print-only {
+      display: block !important;
+    }
   }
 }

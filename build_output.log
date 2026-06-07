@@ -1,0 +1,51 @@
+npm warn Unknown project config "only-built-dependencies". This will stop working in the next major version of npm. See `npm help npmrc` for supported config options.
+
+> 000enviosprismabase@0.1.0 build
+> next build
+
+Attention: Next.js now collects completely anonymous telemetry regarding usage.
+This information is used to shape Next.js' roadmap and prioritize features.
+You can learn more, including how to opt-out if you'd not like to participate in this anonymous program, by visiting the following URL:
+https://nextjs.org/telemetry
+
+▲ Next.js 16.2.4 (Turbopack)
+
+  Creating an optimized production build ...
+✓ Compiled successfully in 14.0s
+  Running TypeScript ...
+  Finished TypeScript in 15.9s ...
+  Collecting page data using 3 workers ...
+  Generating static pages using 3 workers (0/13) ...
+  Generating static pages using 3 workers (3/13)
+  Generating static pages using 3 workers (6/13)
+  Generating static pages using 3 workers (9/13)
+✓ Generating static pages using 3 workers (13/13) in 907ms
+  Finalizing page optimization ...
+
+Route (app)
+┌ ○ /
+├ ○ /_not-found
+├ ○ /contacto
+├ ○ /cotizar/express
+├ ○ /cotizar/lowcost
+├ ƒ /nosotros/nuestras-redes
+├ ○ /nosotros/preguntas-frecuentes
+├ ○ /nosotros/sobre-nosotros
+├ ○ /politica-de-privacidad
+├ ○ /robots.txt
+├ ƒ /servicios/envios-express
+├ ƒ /servicios/envios-lowcost
+├ ƒ /servicios/enviosflex
+├ ƒ /servicios/plan-emprendedores
+├ ○ /sitemap.xml
+└ ○ /terminos-y-condiciones
+
+
+○  (Static)   prerendered as static content
+ƒ  (Dynamic)  server-rendered on demand
+
+npm notice
+npm notice New minor version of npm available! 11.11.0 -> 11.16.0
+npm notice Changelog: https://github.com/npm/cli/releases/tag/v11.16.0
+npm notice To update run: npm install -g npm@11.16.0
+npm notice

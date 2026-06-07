@@ -25,7 +25,7 @@ function SuccessMetrics() {
           <div className="text-display-md font-black text-primary font-display mb-2 italic">
             {metric.value}
           </div>
-          <div className="text-label-sm font-bold uppercase tracking-widest text-gray-500">
+          <div className="text-label-sm font-bold uppercase tracking-widest text-on-surface/70">
             {metric.label}
           </div>
         </motion.div>
@@ -80,11 +80,11 @@ export function EntrepreneurBenefits() {
             viewport={{ once: true }}
           >
             <SuccessMetrics />
-            <h2 className="font-display text-display-md font-black italic mb-6 uppercase text-foreground tracking-tighter">
+            <h2 className="font-display text-display-md font-black italic mb-6 uppercase text-on-surface tracking-tighter">
               BENEFICIOS <span className="text-primary">PARA NEGOCIOS</span>
             </h2>
-            <div className="w-24 h-2 bg-primary mx-auto mb-8 rounded-full" />
-            <p className="text-gray-400 text-body-lg max-w-2xl mx-auto font-sans">
+            <div className="w-24 h-2 bg-primary mx-auto mb-8 rounded-sm" />
+            <p className="text-on-surface/70 text-body-lg max-w-2xl mx-auto font-sans">
               Potenciamos tu capacidad operativa con soluciones logísticas de clase mundial.
             </p>
           </motion.div>
@@ -104,13 +104,13 @@ export function EntrepreneurBenefits() {
               >
                 <Card className="h-full bg-[background]/60 border-white/10 hover:border-primary/30 transition-all group backdrop-blur-sm rounded-3xl overflow-hidden">
                   <CardContent className="p-10 relative">
-                     <div className="absolute top-0 right-0 w-24 h-24 bg-white/5 rotate-45 translate-x-12 -translate-y-12 group-hover:bg-primary/5 transition-colors" />
+                     <div className="absolute top-0 right-0 w-24 h-24 bg-on-surface/5 rotate-45 translate-x-12 -translate-y-12 group-hover:bg-primary/5 transition-colors" />
 
-                    <div className="w-16 h-16 rounded-2xl bg-primary/10 flex items-center justify-center mb-8 group-hover:scale-110 transition-transform relative">
+                    <div className="w-16 h-16 rounded-sm bg-primary/10 flex items-center justify-center mb-8 group-hover:scale-110 transition-transform relative">
                       <IconComponent className="w-8 h-8 text-primary" />
                     </div>
-                    <h3 className="font-display text-headline-lg font-bold mb-4 uppercase text-foreground tracking-tight">{benefit.title}</h3>
-                    <p className="text-gray-400 text-body-md leading-relaxed font-sans">{benefit.description}</p>
+                    <h3 className="font-display text-headline-lg font-bold mb-4 uppercase text-on-surface tracking-tight">{benefit.title}</h3>
+                    <p className="text-on-surface/70 text-body-md leading-relaxed font-sans">{benefit.description}</p>
                   </CardContent>
                 </Card>
               </motion.div>

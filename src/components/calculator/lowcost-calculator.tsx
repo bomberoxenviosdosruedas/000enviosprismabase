@@ -1,4 +1,3 @@
-
 'use client';
 
 import { Button } from '@/components/ui/button';
@@ -95,7 +94,7 @@ export default function LowCostCalculator() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
         >
-          <Card className="shadow-2xl bg-card/60 border-border/50 backdrop-blur-xl rounded-3xl overflow-hidden border">
+          <Card className="shadow-2xl bg-surface/60 border-outline-variant/50 backdrop-blur-xl rounded-3xl overflow-hidden border">
             <CardHeader className="pt-8 px-6 md:px-8">
               <CardTitle className="text-3xl md:text-4xl text-primary font-display font-bold tracking-tight">
                 Calculá tu Envío Low Cost
@@ -127,7 +126,7 @@ export default function LowCostCalculator() {
                             value={origin}
                             onChange={setOrigin}
                             required
-                            className="bg-background/50 border-border focus-visible:ring-primary h-12 rounded-xl"
+                            className="bg-surface/50 border-outline-variant focus-visible:ring-primary h-12 rounded-xl"
                           />
                         </div>
                         <div className="space-y-2">
@@ -140,7 +139,7 @@ export default function LowCostCalculator() {
                             value={destination}
                             onChange={setDestination}
                             required
-                            className="bg-background/50 border-border focus-visible:ring-primary h-12 rounded-xl"
+                            className="bg-surface/50 border-outline-variant focus-visible:ring-primary h-12 rounded-xl"
                           />
                         </div>
                       </div>
@@ -169,8 +168,8 @@ export default function LowCostCalculator() {
 
                     {isCalculating && (
                       <div className="space-y-4 pt-4">
-                        <div className="h-48 w-full bg-muted/20 animate-pulse rounded-2xl" />
-                        <div className="h-32 w-full bg-muted/10 animate-pulse rounded-2xl" />
+                        <div className="h-48 w-full bg-surface-container/20 animate-pulse rounded-2xl" />
+                        <div className="h-32 w-full bg-surface-container/10 animate-pulse rounded-2xl" />
                       </div>
                     )}
                   </motion.div>
@@ -190,7 +189,7 @@ export default function LowCostCalculator() {
                           animate={{ opacity: 1, height: 'auto' }}
                           exit={{ opacity: 0, height: 0 }}
                           transition={{ duration: 0.4, ease: "easeInOut" }}
-                          className="rounded-2xl overflow-hidden border border-border shadow-inner"
+                          className="rounded-2xl overflow-hidden border border-outline-variant shadow-inner"
                         >
                           <RouteMap
                             origin={mapCoordinates.origin}
@@ -218,17 +217,17 @@ export default function LowCostCalculator() {
                           </CardHeader>
                           <CardContent className="space-y-4">
                             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                              <div className="p-4 rounded-xl bg-background/40 border border-border/50">
+                              <div className="p-4 rounded-xl bg-surface-container/40 border border-outline-variant/50">
                                 <span className="text-xs uppercase tracking-widest text-muted-foreground font-semibold">Distancia</span>
                                 <p className="text-xl font-bold text-foreground mt-1">{quoteDetails.distanceText || 'N/A'}</p>
                               </div>
-                              <div className="p-4 rounded-xl bg-background/40 border border-border/50">
+                              <div className="p-4 rounded-xl bg-surface-container/40 border border-outline-variant/50">
                                 <span className="text-xs uppercase tracking-widest text-muted-foreground font-semibold">Tiempo Estimado</span>
                                 <p className="text-xl font-bold text-foreground mt-1">{quoteDetails.durationText || 'N/A'}</p>
                               </div>
                             </div>
 
-                            <div className="pt-4 mt-4 border-t border-border/50 flex flex-col sm:flex-row justify-between items-center gap-4">
+                            <div className="pt-4 mt-4 border-t border-outline-variant/50 flex flex-col sm:flex-row justify-between items-center gap-4">
                               <span className="text-xl font-display font-bold text-primary uppercase tracking-tighter">Total Estimado</span>
                               {quoteDetails.price !== null ? (
                                 <div className="flex flex-col items-end">
@@ -237,12 +236,12 @@ export default function LowCostCalculator() {
                                   </span>
                                 </div>
                               ) : (
-                                <span className="text-3xl font-black text-orange-500 font-display">Consultar</span>
+                                <span className="text-3xl font-black text-error font-display">Consultar</span>
                               )}
                             </div>
 
                             {quoteDetails.price === null && (
-                              <div className="flex items-start gap-2 p-3 rounded-lg bg-orange-500/10 border border-orange-500/20 text-orange-500 text-sm">
+                              <div className="flex items-start gap-2 p-3 rounded-lg bg-error/10 border border-error/20 text-error text-sm">
                                 <AlertCircle className="h-5 w-5 shrink-0" />
                                 <p>La distancia excede los rangos estándar o no pudo ser calculada. Por favor, contactanos para una cotización personalizada.</p>
                               </div>
@@ -252,7 +251,7 @@ export default function LowCostCalculator() {
                             <Button
                               size="lg"
                               className={cn(
-                                "w-full sm:flex-1 h-14 bg-green-600 hover:bg-green-700 text-white font-bold uppercase tracking-tight rounded-xl shadow-lg transition-all",
+                                "w-full sm:flex-1 h-14 bg-success hover:bg-success/90 text-success-foreground font-bold uppercase tracking-tight rounded-xl shadow-lg transition-all",
                                 "active:scale-95 disabled:opacity-50"
                               )}
                               disabled={quoteDetails.price === null}
@@ -264,7 +263,7 @@ export default function LowCostCalculator() {
                             <Button
                               size="lg"
                               variant="outline"
-                              className="w-full sm:w-auto h-14 font-bold uppercase tracking-tight rounded-xl border-border hover:bg-accent text-foreground transition-all active:scale-95"
+                              className="w-full sm:w-auto h-14 font-bold uppercase tracking-tight rounded-xl border-outline-variant hover:bg-accent text-foreground transition-all active:scale-95"
                               onClick={handleNewQuote}
                             >
                               <RotateCcw className="mr-2 h-5 w-5" />

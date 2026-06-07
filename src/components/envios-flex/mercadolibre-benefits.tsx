@@ -8,11 +8,11 @@ import { motion } from "framer-motion"
 function ReputationThermometer() {
   return (
     <div className="max-w-md mx-auto mb-12">
-      <div className="flex justify-between text-xs font-bold uppercase tracking-widest text-gray-500 mb-2">
+      <div className="flex justify-between text-xs font-bold uppercase tracking-widest text-on-surface/60 mb-2">
         <span>Reputación</span>
         <span className="text-green-500">MercadoLíder Platinum</span>
       </div>
-      <div className="h-4 w-full bg-white/5 rounded-full overflow-hidden border border-white/10 flex">
+      <div className="h-4 w-full bg-surface-container rounded-full overflow-hidden border border-border-outline-variant flex">
         <div className="h-full w-1/5 bg-red-500/50" />
         <div className="h-full w-1/5 bg-orange-500/50" />
         <div className="h-full w-1/5 bg-yellow-500/50" />
@@ -104,8 +104,8 @@ export function MercadoLibreBenefits() {
                     <div className="w-16 h-16 rounded-2xl bg-secondary/10 flex items-center justify-center mb-8 group-hover:scale-110 transition-transform relative">
                       <IconComponent className="w-8 h-8 text-secondary" />
                     </div>
-                    <h3 className="font-display text-headline-lg font-bold mb-4 uppercase text-foreground tracking-tight">{benefit.title}</h3>
-                    <p className="text-gray-400 text-body-md leading-relaxed font-sans">{benefit.description}</p>
+                    <h3 className="font-display text-headline-lg font-bold mb-4 uppercase text-on-surface tracking-tight">{benefit.title}</h3>
+                    <p className="text-on-surface/60 text-body-md leading-relaxed font-sans">{benefit.description}</p>
                   </CardContent>
                 </Card>
               </motion.div>

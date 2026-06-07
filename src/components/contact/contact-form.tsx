@@ -7,7 +7,7 @@ import { useForm, type FieldErrors } from "react-hook-form"
 import * as z from "zod"
 
 import { Button } from "@/components/ui/button"
-import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card"
+import { Card, CardContent } from "@/components/ui/card"
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
@@ -35,7 +35,12 @@ const initialState: ContactFormState = {
 function SubmitButton() {
   const { pending } = useFormStatus();
   return (
-    <Button type="submit" disabled={pending} className="w-full bg-secondary hover:bg-yellow-400 text-black py-4 uppercase font-display font-black text-orbitron tracking-wider rounded-xl transition-all duration-300 transform active:scale-95 text-base h-auto" size="lg">
+    <Button
+      type="submit"
+      disabled={pending}
+      className="w-full bg-secondary hover:bg-secondary-container text-black py-4 uppercase font-display font-black tracking-wider rounded-xl transition-all duration-300 transform active:scale-95 text-base h-auto"
+      size="lg"
+    >
       {pending ? (
         <>
           <Loader2 className="mr-2 h-5 w-5 animate-spin" />
@@ -71,22 +76,15 @@ export function ContactForm() {
           toast({
             title: "Mensaje Enviado",
             description: state.message,
-            className: "bg-green-100 border-green-400 text-green-700",
+            className: "bg-surface-container border-outline-variant text-on-surface",
           });
           form.reset();
         }
-        if (state.error) {
+        if (state.error || state.formError) {
           toast({
             variant: "destructive",
-            title: "Error al Enviar",
-            description: state.error,
-          });
-        }
-        if (state.formError) {
-           toast({
-            variant: "destructive",
-            title: "Error en el Formulario",
-            description: state.formError,
+            title: "Error",
+            description: state.error || state.formError,
           });
         }
         if (state.fieldErrors) {
@@ -103,11 +101,11 @@ export function ContactForm() {
   if (state?.message && state.timestamp && state.timestamp > (initialState.timestamp ?? 0)) {
     return (
        <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }}>
-        <Card className="max-w-2xl mx-auto shadow-lg border-green-300 bg-green-50 dark:bg-green-900/20">
+        <Card className="max-w-2xl mx-auto shadow-lg border-outline-variant bg-surface-container">
             <CardContent className="p-8 text-center">
-            <CheckCircle className="w-16 h-16 text-green-500 mx-auto mb-4" />
-            <h3 className="text-2xl font-bold text-green-700 dark:text-green-400 mb-2 font-display">¡Mensaje Enviado!</h3>
-            <p className="text-green-600 dark:text-green-300 font-sans">{state.message}</p>
+            <CheckCircle className="w-16 h-16 text-tertiary mx-auto mb-4" />
+            <h3 className="text-2xl font-bold text-on-surface mb-2 font-display">¡Mensaje Enviado!</h3>
+            <p className="text-on-surface-variant font-sans">{state.message}</p>
             </CardContent>
         </Card>
       </motion.div>
@@ -119,41 +117,40 @@ export function ContactForm() {
       <CardContent className="p-6 sm:p-8">
         <Form {...form}>
             <form action={formAction} className="space-y-5 sm:space-y-6">
-            
               <FormField
                 control={form.control as any}
                 name="name"
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel className="flex items-center text-label-md uppercase text-gray-300 font-bold mb-2"><User className="w-4 h-4 mr-2 text-primary"/>Nombre *</FormLabel>
+                    <FormLabel className="flex items-center text-on-surface-variant uppercase font-bold mb-2"><User className="w-4 h-4 mr-2 text-primary"/>Nombre *</FormLabel>
                     <FormControl>
                       <Input placeholder="Tu nombre" {...field} className="h-11 text-base bg-[background]/50 border border-white/10 hover:border-white/20 focus:border-primary focus:ring-2 focus:ring-primary/20 text-white rounded-lg transition-all duration-300 font-sans"/>
                     </FormControl>
-                    <FormMessage />
+                    <FormMessage className="text-error" />
                   </FormItem>
                 )}
               />
-            
+
             <FormField
               control={form.control as any}
               name="email"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel className="flex items-center text-label-md uppercase text-gray-300 font-bold mb-2"><Mail className="w-4 h-4 mr-2 text-primary"/>Email *</FormLabel>
+                  <FormLabel className="flex items-center text-on-surface-variant uppercase font-bold mb-2"><Mail className="w-4 h-4 mr-2 text-primary"/>Email *</FormLabel>
                   <FormControl>
                     <Input type="email" placeholder="tu@email.com" {...field} className="h-11 text-base bg-[background]/50 border border-white/10 hover:border-white/20 focus:border-primary focus:ring-2 focus:ring-primary/20 text-white rounded-lg transition-all duration-300 font-sans"/>
                   </FormControl>
-                  <FormMessage />
+                  <FormMessage className="text-error" />
                 </FormItem>
               )}
             />
-            
+
             <FormField
               control={form.control as any}
               name="message"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel className="flex items-center text-label-md uppercase text-gray-300 font-bold mb-2"><MessageSquare className="w-4 h-4 mr-2 text-primary"/>Mensaje *</FormLabel>
+                  <FormLabel className="flex items-center text-on-surface-variant uppercase font-bold mb-2"><MessageSquare className="w-4 h-4 mr-2 text-primary"/>Mensaje *</FormLabel>
                   <FormControl>
                     <Textarea
                       placeholder="Contanos sobre tu consulta o necesidad de envío..."
@@ -162,7 +159,7 @@ export function ContactForm() {
                       className="text-base bg-[background]/50 border border-white/10 hover:border-white/20 focus:border-primary focus:ring-2 focus:ring-primary/20 text-white rounded-lg transition-all duration-300 font-sans"
                     />
                   </FormControl>
-                  <FormMessage />
+                  <FormMessage className="text-error" />
                 </FormItem>
               )}
             />

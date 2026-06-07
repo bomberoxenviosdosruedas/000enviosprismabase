@@ -54,18 +54,15 @@
 ::-webkit-scrollbar {
   width: 8px;
 }
-
 ::-webkit-scrollbar-track {
-  background: hsl(var(--muted));
+  background: #1b1b23; /* surface-container-low */
 }
-
 ::-webkit-scrollbar-thumb {
-  background: hsl(var(--primary));
+  background: #0022FF; /* primary */
   border-radius: 4px;
 }
-
 ::-webkit-scrollbar-thumb:hover {
-  background: hsl(var(--primary) / 0.8);
+  background: #2b3fff; /* inverse-primary */
 }
 
 /* Smooth scrolling */
@@ -75,7 +72,7 @@ html {
 
 /* Focus styles */
 *:focus-visible {
-  outline: 2px solid hsl(var(--ring));
+  outline: 2px solid #0022FF;
   outline-offset: 2px;
 }
 

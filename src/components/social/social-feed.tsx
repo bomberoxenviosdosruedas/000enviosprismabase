@@ -18,9 +18,9 @@ const platformIcons = {
 };
 
 const platformColors = {
-  facebook: "bg-[#1877F2]",
-  instagram: "bg-gradient-to-tr from-[#F58529] via-[#DD2A7B] to-[#8134AF]",
-  whatsapp: "bg-[#25D366]",
+  facebook: "bg-primary",
+  instagram: "bg-tertiary",
+  whatsapp: "bg-secondary",
 };
 
 const PlatformIcon = ({ platform }: { platform: SocialPost['platform'] }) => {

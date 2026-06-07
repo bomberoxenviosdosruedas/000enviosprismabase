@@ -20,6 +20,8 @@ export default function CalculatorHero() {
           icon: "ArrowRight"
         }
       ]}
+      titleClassName="text-3xl sm:text-4xl md:text-7xl font-black italic tracking-tighter leading-[0.9] mb-8 uppercase text-on-surface font-display"
+      descriptionClassName="text-on-surface-variant text-lg md:text-xl mb-12 max-w-xl mx-auto leading-relaxed font-sans"
     />
   );
 }

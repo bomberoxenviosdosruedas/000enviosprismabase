@@ -50,7 +50,7 @@ export function EnviosFlexContent() {
               DOMINÁ TUS VENTAS <br />
               <span className="text-secondary italic">CON ENVÍOS FLEX</span>
             </h2>
-            <p className="text-gray-400 text-body-lg mb-10 leading-relaxed font-sans max-w-xl">
+            <p className="text-on-surface-variant text-body-lg mb-10 leading-relaxed font-sans max-w-xl">
               Somos el aliado estratégico para vendedores de MercadoLibre con Cobertura MDP total. Optimizamos tus Envíos Same-Day Mar del Plata para que vos solo te preocupes por vender más.
             </p>
 
@@ -67,8 +67,8 @@ export function EnviosFlexContent() {
                     <Check className="w-3.5 h-3.5 text-secondary" />
                   </div>
                   <div>
-                    <h3 className="text-headline-lg-mobile font-bold text-foreground mb-2 font-display uppercase tracking-tight">{feature.title}</h3>
-                    <p className="text-gray-400 text-body-md leading-relaxed font-sans">{feature.description}</p>
+                    <h3 className="text-headline-lg-mobile font-bold text-on-surface mb-2 font-display uppercase tracking-tight">{feature.title}</h3>
+                    <p className="text-on-surface-variant text-body-md leading-relaxed font-sans">{feature.description}</p>
                   </div>
                 </motion.div>
               ))}
@@ -82,7 +82,7 @@ export function EnviosFlexContent() {
           >
             <div className="text-center lg:text-right select-none opacity-20">
               <div className="space-y-2">
-                <div className="text-7xl md:text-8xl lg:text-9xl font-black italic text-foreground font-display tracking-tighter leading-none">
+                <div className="text-7xl md:text-8xl lg:text-9xl font-black italic text-on-surface font-display tracking-tighter leading-none">
                   FLEX
                 </div>
                 <div className="text-7xl md:text-8xl lg:text-9xl font-black italic text-secondary font-display tracking-tighter leading-none">

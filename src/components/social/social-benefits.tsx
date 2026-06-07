@@ -29,8 +29,8 @@ export function SocialBenefits() {
     <section className="py-20 px-4 bg-[background]">
       <div className="container mx-auto max-w-6xl">
         <div className="text-center mb-16">
-          <h2 className="text-display-md text-foreground mb-4 font-display uppercase">Beneficios de Formar Parte</h2>
-          <p className="text-body-lg text-muted-foreground max-w-2xl mx-auto font-sans">
+          <h2 className="text-display-md text-on-surface mb-4 font-display uppercase">Beneficios de Formar Parte</h2>
+          <p className="text-body-lg text-on-surface-variant max-w-2xl mx-auto font-sans">
             Descubrí por qué cientos de marplatenses ya nos siguen en nuestras redes.
           </p>
         </div>
@@ -44,8 +44,8 @@ export function SocialBenefits() {
                   <div className="w-16 h-16 bg-secondary/10 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
                     <IconComponent className="w-8 h-8 text-secondary" />
                   </div>
-                  <h3 className="text-headline-lg text-foreground mb-4 font-display">{benefit.title}</h3>
-                  <p className="text-body-md text-muted-foreground leading-relaxed font-sans">{benefit.description}</p>
+                  <h3 className="text-headline-lg text-on-surface mb-4 font-display">{benefit.title}</h3>
+                  <p className="text-body-md text-on-surface-variant leading-relaxed font-sans">{benefit.description}</p>
                 </CardContent>
               </Card>
             )

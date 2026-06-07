@@ -4,65 +4,49 @@
 
 @layer base {
   :root {
-    --background: 240 17% 9%; /* #13131b */
-    --foreground: 228 22% 91%; /* #e4e1ed */
+    /* Base Colors from DESIGN.md */
+    --background: 240 17% 9%;    /* #13131b */
+    --foreground: 228 22% 91%;   /* #e4e1ed */
 
-    --primary: 228 100% 50%; /* #0022FF */
+    --primary: 228 100% 50%;     /* #0022FF - Electric Blue */
     --primary-foreground: 228 22% 91%;
 
-    --secondary: 47 100% 50%; /* #FFD700 */
-    --secondary-foreground: 47 100% 10%;
+    --secondary: 51 100% 50%;    /* #FFD700 - Cyber Gold */
+    --secondary-foreground: 240 17% 9%;
 
-    --tertiary: 184 100% 46%; /* #00dbe9 */
-    --tertiary-foreground: 184 100% 11%;
+    --tertiary: 184 100% 46%;    /* #00dbe9 - Neon Cyan */
+    --tertiary-foreground: 240 17% 9%;
 
-    --card: 240 17% 9%;
+    /* Surface & Containers (Material 3 mappings) */
+    --card: 240 17% 9%;          /* surface */
     --card-foreground: 228 22% 91%;
 
-    --popover: 240 17% 9%;
+    --popover: 240 17% 9%;       /* surface */
     --popover-foreground: 228 22% 91%;
 
-    --muted: 240 10% 15%;
-    --muted-foreground: 240 10% 70%;
+    --muted: 240 11% 18%;        /* surface-container */
+    --muted-foreground: 240 14% 81%; /* on-surface-variant */
 
-    --accent: 240 17% 20%;
+    --accent: 228 100% 50%;      /* primary tint */
     --accent-foreground: 228 22% 91%;
 
-    --destructive: 0 84% 60%;
-    --destructive-foreground: 0 0% 100%;
+    --destructive: 6 100% 83%;   /* error */
+    --destructive-foreground: 355 100% 21%;
 
-    --border: 240 17% 20%;
-    --input: 240 17% 20%;
+    --border: 240 11% 30%;       /* outline-variant */
+    --input: 240 11% 30%;
     --ring: 228 100% 50%;
 
-    --radius: 0.5rem;
-  }
-
-  .dark {
-    --background: 225 57% 3.9%;
-    --foreground: 210 40% 98%;
-    --card: 225 57% 3.9%;
-    --card-foreground: 210 40% 98%;
-    --popover: 225 57% 3.9%;
-    --popover-foreground: 210 40% 98%;
-    --primary: 217.2 91.2% 59.8%;
-    --primary-foreground: 222.2 47.4% 11.2%;
-    --secondary: 45 93% 47%;
-    --secondary-foreground: 26 83% 14%;
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 217.2 91.2% 59.8%;
+    --radius: 0.25rem;           /* 4px base radius */
+    --whatsapp: 142 70% 49%;
+    --facebook: 214 89% 52%;
+    --instagram: 340 75% 54%;
   }
 
   body {
     background-color: hsl(var(--background));
     color: hsl(var(--foreground));
+    font-feature-settings: "rlig" 1, "calt" 1;
   }
 }
 
@@ -96,116 +80,75 @@ html {
 }
 
 @layer utilities {
+  /* Typography Scale from DESIGN.md */
   .text-display-lg {
-    font-family: var(--font-display);
-    font-size: 48px;
-    font-weight: 900;
+    font-family: var(--font-anybody);
+    font-size: clamp(48px, 8vw, 72px);
+    font-weight: 800;
     line-height: 1.1;
     letter-spacing: -0.02em;
   }
-  .text-display-md {
-    font-family: var(--font-display);
-    font-size: 32px;
+
+  .text-headline-lg {
+    font-family: var(--font-anybody);
+    font-size: clamp(32px, 5vw, 40px);
     font-weight: 700;
     line-height: 1.2;
-    letter-spacing: -0.01em;
   }
-  .text-headline-lg {
-    font-family: var(--font-display);
-    font-size: 24px;
-    font-weight: 700;
-    line-height: 1.3;
-    letter-spacing: 0.02em;
-  }
-  .text-headline-lg-mobile {
-    font-family: var(--font-display);
-    font-size: 20px;
-    font-weight: 700;
-    line-height: 1.3;
-  }
-  .text-headline-md {
-    font-family: var(--font-display);
-    font-size: 24px;
-    font-weight: 600;
-    line-height: 1.3;
-  }
+
   .text-body-lg {
-    font-family: var(--font-sans);
+    font-family: var(--font-hanken);
     font-size: 18px;
     font-weight: 400;
     line-height: 1.6;
   }
+
   .text-body-md {
-    font-family: var(--font-sans);
+    font-family: var(--font-hanken);
     font-size: 16px;
     font-weight: 400;
-    line-height: 1.5;
+    line-height: 1.6;
   }
+
   .text-label-md {
-    font-family: var(--font-sans);
+    font-family: var(--font-jetbrains);
     font-size: 14px;
-    font-weight: 700;
+    font-weight: 500;
     line-height: 1.2;
     letter-spacing: 0.05em;
+    text-transform: uppercase;
   }
-  .text-label-sm {
-    font-family: var(--font-sans);
-    font-size: 12px;
-    font-weight: 400;
-    line-height: 1.2;
-    letter-spacing: 0.1em;
+
+  /* Effects: Glassmorphism */
+  .glass-panel {
+    background: rgba(19, 19, 27, 0.7);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(0, 219, 233, 0.1);
   }
-  .text-code-tracking {
-    font-family: var(--font-display);
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 1.0;
-    letter-spacing: 0.1em;
+
+  /* Effects: Luminous Outer Glow (Bloom) */
+  .glow-primary {
+    box-shadow: 0 0 20px rgba(0, 34, 255, 0.15);
+  }
+
+  .glow-secondary {
+    box-shadow: 0 0 20px rgba(255, 215, 0, 0.15);
   }
 
   .print-only {
     display: none;
   }
+
   @media print {
     body {
       background-color: white !important;
-      -webkit-print-color-adjust: exact;
-      print-color-adjust: exact;
+      color: black !important;
     }
     .no-print {
       display: none !important;
     }
     .print-only {
       display: block !important;
-    }
-    .printable-area {
-      box-shadow: none !important;
-      border: 1px solid #ccc !important;
-      max-width: 100% !important;
-      margin: 0 !important;
-    }
-    .printable-label-wrapper {
-        break-inside: avoid-page;
-        padding: 0 !important;
-        margin: 0 !important;
-    }
-    .labels-container {
-        display: flex;
-        flex-direction: column;
-        gap: 1rem;
-    }
-     .labels-container-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 10mm;
-    }
-    .printable-label-wrapper-grid {
-      break-inside: avoid;
-      page-break-inside: avoid;
-    }
-    @page {
-      size: A4;
-      margin: 10mm;
     }
   }
 }

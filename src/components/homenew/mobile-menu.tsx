@@ -76,7 +76,7 @@ export function MobileMenu({ navGroups }: MobileMenuProps) {
             <span className="sr-only">Abrir menú</span>
           </Button>
         </SheetTrigger>
-        <SheetContent side="right" className="w-[320px] bg-[#0a0d16]/95 border-white/10 text-white backdrop-blur-2xl pt-12 p-6 shadow-2xl">
+        <SheetContent side="right" className="w-[320px] bg-[background]/95 border-white/10 text-white backdrop-blur-2xl pt-12 p-6 shadow-2xl">
           <SheetHeader className="mb-12 flex flex-row items-center space-x-4">
             <div className="relative w-10 h-10 rounded-xl flex items-center justify-center drop-shadow-[0_0_10px_rgba(37,99,235,0.4)]">
               <Image src="/LogoEnviosDosRuedas.webp" alt="Logo Dos Ruedas" fill className="object-contain" sizes="40px" />

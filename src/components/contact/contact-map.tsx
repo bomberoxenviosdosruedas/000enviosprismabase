@@ -34,7 +34,7 @@ export function ContactMap() {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="relative h-[450px] md:h-[550px] w-full rounded-2xl overflow-hidden shadow-2xl border border-white/10 bg-[#0a0d16]/60 backdrop-blur-md"
+          className="relative h-[50vh] md:h-[60vh] w-full rounded-2xl overflow-hidden shadow-2xl border border-white/10 bg-[background]/60 backdrop-blur-md"
         >
           <iframe 
             src="https://www.openstreetmap.org/export/embed.html?bbox=-57.8,-38.15,-57.4,-37.85&layer=mapnik"

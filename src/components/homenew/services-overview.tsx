@@ -21,7 +21,7 @@ type ServiceTheme = {
 
 const THEMES: Record<string, ServiceTheme> = {
   express: {
-    card: "bg-[#0a0d16]/80 border-red-500/20 hover:border-red-500/40 shadow-2xl backdrop-blur-md",
+    card: "bg-[background]/80 border-red-500/20 hover:border-red-500/40 shadow-2xl backdrop-blur-md",
     icon: "bg-red-500/10 border border-red-500/20 text-red-400 drop-shadow-[0_0_15px_rgba(239,68,68,0.4)]",
     accent: "text-red-400",
     text: "text-white",
@@ -32,7 +32,7 @@ const THEMES: Record<string, ServiceTheme> = {
     glowColor: "rgba(239,68,68,0.1)"
   },
   lowcost: {
-    card: "bg-[#0a0d16]/80 border-cyan-500/20 hover:border-cyan-500/40 shadow-2xl backdrop-blur-md",
+    card: "bg-[background]/80 border-cyan-500/20 hover:border-cyan-500/40 shadow-2xl backdrop-blur-md",
     icon: "bg-cyan-500/10 border border-cyan-500/20 text-cyan-400 drop-shadow-[0_0_15px_rgba(6,182,212,0.4)]",
     accent: "text-cyan-400",
     text: "text-white",
@@ -43,7 +43,7 @@ const THEMES: Record<string, ServiceTheme> = {
     glowColor: "rgba(6,182,212,0.1)"
   },
   meli: {
-    card: "bg-[#0a0d16]/80 border-yellow-500/20 hover:border-yellow-500/40 shadow-2xl backdrop-blur-md",
+    card: "bg-[background]/80 border-yellow-500/20 hover:border-yellow-500/40 shadow-2xl backdrop-blur-md",
     icon: "bg-yellow-500/10 border border-yellow-500/20 text-yellow-400 drop-shadow-[0_0_15px_rgba(234,179,8,0.3)]",
     accent: "text-yellow-400",
     text: "text-white",
@@ -54,7 +54,7 @@ const THEMES: Record<string, ServiceTheme> = {
     glowColor: "rgba(234,179,8,0.1)"
   },
   ecommerce: {
-    card: "bg-[#0a0d16]/80 border-emerald-500/20 hover:border-emerald-500/40 shadow-2xl backdrop-blur-md",
+    card: "bg-[background]/80 border-emerald-500/20 hover:border-emerald-500/40 shadow-2xl backdrop-blur-md",
     icon: "bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 drop-shadow-[0_0_15px_rgba(16,185,129,0.3)]",
     accent: "text-emerald-400",
     text: "text-white",
@@ -183,7 +183,7 @@ export const ServicesOverview = () => {
                 variants={itemVariants}
                 whileHover={{ y: -10, transition: { duration: 0.3 } }}
                 className={cn(
-                  "group p-6 lg:p-10 rounded-[32px] lg:rounded-[40px] glass-card transition-all duration-500 flex flex-col justify-between relative overflow-hidden",
+                  "group p-6 lg:p-10 rounded-xl lg:rounded-xl glass-card transition-all duration-500 flex flex-col justify-between relative overflow-hidden",
                   theme.card,
                   service.className
                 )}

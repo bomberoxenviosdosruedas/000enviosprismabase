@@ -25,7 +25,7 @@ export const Footer = () => {
   };
 
   return (
-    <footer className="pt-32 pb-16 px-4 border-t border-white/5 bg-[#030710] relative overflow-hidden">
+    <footer className="pt-32 pb-16 px-4 border-t border-white/5 bg-[background] relative overflow-hidden">
       {/* Background Decorative Elements */}
       <div className="absolute bottom-0 right-0 w-[500px] h-[500px] bg-primary/5 rounded-full blur-[120px] pointer-events-none opacity-50" />
       <div className="absolute top-0 left-0 w-[300px] h-[300px] bg-secondary/5 rounded-full blur-[100px] pointer-events-none opacity-30" />

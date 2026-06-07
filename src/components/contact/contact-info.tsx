@@ -48,7 +48,7 @@ export function ContactInfo() {
       description: "Para consultas detalladas o corporativas.",
       actionText: "Enviar Email",
       href: "mailto:matiascejas@enviosdosruedas.com",
-      colorClasses: "border-secondary text-secondary hover:bg-secondary hover:text-[#00246B]",
+      colorClasses: "border-secondary text-secondary hover:bg-secondary hover:text-[var(--background)]",
       iconBg: "bg-secondary/10",
       iconColor: "text-secondary",
     },
@@ -86,7 +86,7 @@ export function ContactInfo() {
             viewport={{ once: true, amount: 0.2 }}
             variants={cardVariants}
           >
-            <Card className="mb-8 sm:mb-10 shadow-2xl border border-white/10 backdrop-blur-md bg-[#0a0d16]/60 hover:border-primary/30 transition-all duration-500 rounded-2xl">
+            <Card className="mb-8 sm:mb-10 shadow-2xl border border-white/10 backdrop-blur-md bg-[background]/60 hover:border-primary/30 transition-all duration-500 rounded-2xl">
               <CardContent className="p-6 sm:p-8 text-center">
                 <div className="flex items-center justify-center mb-2 sm:mb-3">
                     <Home className="w-7 h-7 sm:w-8 sm:h-8 text-primary mr-2 sm:mr-3" />
@@ -123,7 +123,7 @@ export function ContactInfo() {
                   viewport={{ once: true, amount: 0.2 }}
                   variants={cardVariants}
                 >
-                  <Card className="hover:shadow-2xl hover:-translate-y-1.5 h-full flex flex-col border border-white/10 bg-[#0a0d16]/60 backdrop-blur-md hover:border-primary/30 rounded-2xl transition-all duration-500">
+                  <Card className="hover:shadow-2xl hover:-translate-y-1.5 h-full flex flex-col border border-white/10 bg-[background]/60 backdrop-blur-md hover:border-primary/30 rounded-2xl transition-all duration-500">
                     <CardContent className="p-6 text-center flex flex-col items-center flex-grow">
                       <div className={cn("w-14 h-14 sm:w-16 sm:h-16 rounded-2xl flex items-center justify-center mx-auto mb-4 transform group-hover:scale-110 transition-transform duration-300", method.iconBg)}>
                         {IconComponent && <IconComponent className={cn("w-7 h-7 sm:w-8 sm:h-8", method.iconColor)} />}

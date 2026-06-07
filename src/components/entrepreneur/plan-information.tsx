@@ -46,7 +46,7 @@ export function PlanInformation() {
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 text-blue-400 text-label-sm font-bold tracking-widest mb-6 uppercase">
               SOLUCIONES CORPORATIVAS
             </div>
-            <h2 className="font-display text-display-lg md:text-[60px] font-black leading-[1] mb-8 uppercase text-foreground tracking-tighter">
+            <h2 className="font-display text-display-lg text-display-lg font-black leading-[1] mb-8 uppercase text-foreground tracking-tighter">
               LOGÍSTICA 3PL <br />
               <span className="text-primary italic">PARA EMPRENDEDORES</span>
             </h2>

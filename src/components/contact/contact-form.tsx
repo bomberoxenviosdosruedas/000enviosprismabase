@@ -115,7 +115,7 @@ export function ContactForm() {
   }
 
   return (
-    <Card className="max-w-2xl mx-auto shadow-2xl border border-white/10 bg-[#0a0d16]/60 backdrop-blur-md hover:border-primary/30 transition-all duration-500 rounded-2xl">
+    <Card className="max-w-2xl mx-auto shadow-2xl border border-white/10 bg-[background]/60 backdrop-blur-md hover:border-primary/30 transition-all duration-500 rounded-2xl">
       <CardContent className="p-6 sm:p-8">
         <Form {...form}>
             <form action={formAction} className="space-y-5 sm:space-y-6">
@@ -127,7 +127,7 @@ export function ContactForm() {
                   <FormItem>
                     <FormLabel className="flex items-center text-label-md uppercase text-gray-300 font-bold mb-2"><User className="w-4 h-4 mr-2 text-primary"/>Nombre *</FormLabel>
                     <FormControl>
-                      <Input placeholder="Tu nombre" {...field} className="h-11 text-base bg-[#030710]/50 border border-white/10 hover:border-white/20 focus:border-primary focus:ring-2 focus:ring-primary/20 text-white rounded-lg transition-all duration-300 font-sans"/>
+                      <Input placeholder="Tu nombre" {...field} className="h-11 text-base bg-[background]/50 border border-white/10 hover:border-white/20 focus:border-primary focus:ring-2 focus:ring-primary/20 text-white rounded-lg transition-all duration-300 font-sans"/>
                     </FormControl>
                     <FormMessage />
                   </FormItem>
@@ -141,7 +141,7 @@ export function ContactForm() {
                 <FormItem>
                   <FormLabel className="flex items-center text-label-md uppercase text-gray-300 font-bold mb-2"><Mail className="w-4 h-4 mr-2 text-primary"/>Email *</FormLabel>
                   <FormControl>
-                    <Input type="email" placeholder="tu@email.com" {...field} className="h-11 text-base bg-[#030710]/50 border border-white/10 hover:border-white/20 focus:border-primary focus:ring-2 focus:ring-primary/20 text-white rounded-lg transition-all duration-300 font-sans"/>
+                    <Input type="email" placeholder="tu@email.com" {...field} className="h-11 text-base bg-[background]/50 border border-white/10 hover:border-white/20 focus:border-primary focus:ring-2 focus:ring-primary/20 text-white rounded-lg transition-all duration-300 font-sans"/>
                   </FormControl>
                   <FormMessage />
                 </FormItem>
@@ -159,7 +159,7 @@ export function ContactForm() {
                       placeholder="Contanos sobre tu consulta o necesidad de envío..."
                       rows={5}
                       {...field}
-                      className="text-base bg-[#030710]/50 border border-white/10 hover:border-white/20 focus:border-primary focus:ring-2 focus:ring-primary/20 text-white rounded-lg transition-all duration-300 font-sans"
+                      className="text-base bg-[background]/50 border border-white/10 hover:border-white/20 focus:border-primary focus:ring-2 focus:ring-primary/20 text-white rounded-lg transition-all duration-300 font-sans"
                     />
                   </FormControl>
                   <FormMessage />

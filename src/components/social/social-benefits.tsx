@@ -26,7 +26,7 @@ export function SocialBenefits() {
   ]
 
   return (
-    <section className="py-20 px-4 bg-[#030710]">
+    <section className="py-20 px-4 bg-[background]">
       <div className="container mx-auto max-w-6xl">
         <div className="text-center mb-16">
           <h2 className="text-display-md text-foreground mb-4 font-display uppercase">Beneficios de Formar Parte</h2>
@@ -39,7 +39,7 @@ export function SocialBenefits() {
           {benefits.map((benefit, index) => {
             const IconComponent = benefit.icon
             return (
-              <Card key={index} className="text-center hover:shadow-xl transition-all duration-300 border-white/10 bg-[#0a0d16]/60 backdrop-blur-sm group">
+              <Card key={index} className="text-center hover:shadow-xl transition-all duration-300 border-white/10 bg-[background]/60 backdrop-blur-sm group">
                 <CardContent className="p-8">
                   <div className="w-16 h-16 bg-secondary/10 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
                     <IconComponent className="w-8 h-8 text-secondary" />

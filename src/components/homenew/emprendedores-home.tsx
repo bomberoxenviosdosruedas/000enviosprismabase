@@ -105,7 +105,7 @@ export const EmprendedoresHome = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.7, delay: idx * 0.15, ease: [0.16, 1, 0.3, 1] }}
               whileHover={{ y: -15, scale: 1.02 }}
-              className="group relative h-full rounded-[48px] overflow-hidden border border-white/5 bg-[#0a0d16] hover:border-primary/40 transition-all duration-700 shadow-[0_30px_60px_-15px_rgba(0,0,0,0.6)]"
+              className="group relative h-full rounded-xl overflow-hidden border border-white/5 bg-[background] hover:border-primary/40 transition-all duration-700 shadow-[0_30px_60px_-15px_rgba(0,0,0,0.6)]"
             >
               <Image
                 src={solution.image}
@@ -114,7 +114,7 @@ export const EmprendedoresHome = () => {
                 sizes="(max-width: 768px) 100vw, 33vw"
                 className="object-cover opacity-15 grayscale group-hover:grayscale-0 group-hover:opacity-40 group-hover:scale-110 transition-all duration-1000"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-[#0a0d16] via-[#0a0d16]/80 to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-t from-[background] via-[background]/80 to-transparent" />
 
               <div className="absolute inset-0 p-12 flex flex-col justify-end">
                 <div className="flex justify-between items-start mb-auto">

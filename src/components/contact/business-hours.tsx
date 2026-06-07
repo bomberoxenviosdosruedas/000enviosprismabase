@@ -43,7 +43,7 @@ export function BusinessHours() {
               variants={cardVariants}
               className="md:col-span-2 max-w-2xl mx-auto w-full"
             >
-              <Card className="hover:shadow-2xl h-full border border-white/10 bg-[#0a0d16]/60 backdrop-blur-md hover:border-primary/30 rounded-2xl transition-all duration-500">
+              <Card className="hover:shadow-2xl h-full border border-white/10 bg-[background]/60 backdrop-blur-md hover:border-primary/30 rounded-2xl transition-all duration-500">
                 <CardHeader className="pb-3 sm:pb-4 p-6 sm:p-8">
                   <CardTitle className="flex items-center text-headline-lg text-primary uppercase font-bold">
                     <Calendar className="w-5 h-5 sm:w-6 sm:h-6 mr-2 text-primary" />

@@ -1,21 +1,25 @@
 import type { Metadata, Viewport } from "next";
-import { Roboto, Orbitron } from "next/font/google";
+import { Anybody, Hanken_Grotesk, JetBrains_Mono } from "next/font/google";
 import { Toaster } from "@/components/ui/toaster";
 import { WhatsAppReviewButton } from "@/components/seo/WhatsAppReviewButton";
 import "./globals.css";
 
-const roboto = Roboto({
+const anybody = Anybody({
   subsets: ["latin"],
-  weight: ["400", "500", "700"],
-  variable: "--font-roboto",
-  display: 'swap',
+  variable: "--font-anybody",
+  display: "swap",
 });
 
-const orbitron = Orbitron({
+const hanken = Hanken_Grotesk({
   subsets: ["latin"],
-  weight: ["400", "700", "900"],
-  variable: "--font-orbitron",
-  display: 'swap',
+  variable: "--font-hanken",
+  display: "swap",
+});
+
+const jetbrains = JetBrains_Mono({
+  subsets: ["latin"],
+  variable: "--font-jetbrains",
+  display: "swap",
 });
 
 export const viewport: Viewport = {
@@ -150,7 +154,7 @@ export default function RootLayout({
         />
       </head>
       <body
-        className={`${roboto.variable} ${orbitron.variable} font-sans antialiased`}
+        className={`${anybody.variable} ${hanken.variable} ${jetbrains.variable} font-sans antialiased`}
       >
         {children}
         <WhatsAppReviewButton />

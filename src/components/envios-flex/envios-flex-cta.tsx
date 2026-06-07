@@ -15,7 +15,7 @@ export function EnviosFlexCta() {
   }
 
   return (
-    <section className="py-24 px-4 bg-[#0a0d16] relative overflow-hidden">
+    <section className="py-24 px-4 bg-[background] relative overflow-hidden">
       <div className="absolute top-0 left-0 w-full h-full opacity-30 pointer-events-none">
         <div className="absolute top-1/2 left-1/4 w-[500px] h-[500px] bg-primary/20 rounded-full blur-[120px]" />
         <div className="absolute bottom-0 right-1/4 w-[500px] h-[500px] bg-secondary/10 rounded-full blur-[120px]" />
@@ -23,7 +23,7 @@ export function EnviosFlexCta() {
 
       <div className="max-w-6xl mx-auto relative z-10">
         <motion.div
-          className="p-12 md:p-16 rounded-[40px] bg-gradient-to-br from-primary/10 via-[#0a0d16]/80 to-secondary/5 border border-white/10 backdrop-blur-xl relative overflow-hidden text-center"
+          className="p-12 md:p-16 rounded-xl bg-gradient-to-br from-primary/10 via-[background]/80 to-secondary/5 border border-white/10 backdrop-blur-xl relative overflow-hidden text-center"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}

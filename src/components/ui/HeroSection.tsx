@@ -179,7 +179,7 @@ export function HeroSection({
       {backgroundType === 'shader' && (
         <>
           <MeshGradientBackground />
-          <div className="absolute inset-0 bg-[#030710]/40 backdrop-blur-[1px] pointer-events-none z-0" />
+          <div className="absolute inset-0 bg-[background]/40 backdrop-blur-[1px] pointer-events-none z-0" />
         </>
       )}
 

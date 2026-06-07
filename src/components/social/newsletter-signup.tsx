@@ -23,13 +23,13 @@ export function NewsletterSignup() {
   }
 
   return (
-    <section className="py-24 px-4 bg-[#0a0d16]/60 border-t border-white/10 overflow-hidden relative">
+    <section className="py-24 px-4 bg-[background]/60 border-t border-white/10 overflow-hidden relative">
       {/* Background Decorative Elements */}
       <div className="absolute top-0 right-0 w-96 h-96 bg-secondary/10 rounded-full translate-x-1/2 -translate-y-1/2 blur-3xl"></div>
       <div className="absolute bottom-0 left-0 w-64 h-64 bg-black/10 rounded-full -translate-x-1/2 translate-y-1/2 blur-3xl"></div>
 
       <div className="container mx-auto max-w-5xl relative z-10">
-        <Card className="bg-[#030710] backdrop-blur-md border-white/10 shadow-2xl rounded-[2.5rem] overflow-hidden">
+        <Card className="bg-[background] backdrop-blur-md border-white/10 shadow-2xl rounded-3xl overflow-hidden">
           <CardContent className="p-10 md:p-16 text-center">
             {isSubscribed ? (
               <div className="text-white animate-in zoom-in duration-500">
@@ -55,7 +55,7 @@ export function NewsletterSignup() {
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
                     required
-                    className="flex-1 h-16 bg-[#0a0d16] border-white/30 text-white placeholder:text-gray-500 rounded-xl px-6 focus:bg-[#0a0d16]/80 focus-visible:border-secondary transition-all font-sans text-body-md"
+                    className="flex-1 h-16 bg-[background] border-white/30 text-white placeholder:text-gray-500 rounded-xl px-6 focus:bg-[background]/80 focus-visible:border-secondary transition-all font-sans text-body-md"
                   />
                   <Button
                     type="submit"

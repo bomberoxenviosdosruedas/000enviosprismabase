@@ -22,7 +22,7 @@ export default function RotatingCard({
             alt="Tarjeta de Envíos DosRuedas - Vista Frontal"
             fill
             sizes="(max-width: 640px) 280px, (max-width: 1024px) 320px, 400px"
-            className="w-full h-full object-contain rounded-[18px]"
+            className="w-full h-full object-contain rounded-xl"
             priority
           />
         </div>
@@ -34,7 +34,7 @@ export default function RotatingCard({
             alt="Tarjeta de Envíos DosRuedas - Vista Posterior"
             fill
             sizes="(max-width: 640px) 280px, (max-width: 1024px) 320px, 400px"
-            className="w-full h-full object-contain rounded-[18px]"
+            className="w-full h-full object-contain rounded-xl"
           />
         </div>
       </div>

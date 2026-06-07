@@ -1,4 +1,5 @@
 import type { Config } from "tailwindcss"
+import animate from "tailwindcss-animate"
 
 const config: Config = {
   darkMode: ["class"],
@@ -32,6 +33,10 @@ const config: Config = {
           DEFAULT: "hsl(var(--secondary))",
           foreground: "hsl(var(--secondary-foreground))",
         },
+        tertiary: {
+          DEFAULT: "hsl(var(--tertiary))",
+          foreground: "hsl(var(--tertiary-foreground))",
+        },
         destructive: {
           DEFAULT: "hsl(var(--destructive))",
           foreground: "hsl(var(--destructive-foreground))",
@@ -52,63 +57,44 @@ const config: Config = {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
+        whatsapp: "hsl(var(--whatsapp))",
+        facebook: "hsl(var(--facebook))",
+        instagram: "hsl(var(--instagram))",
+      },
+      fontSize: {
+        xxs: "0.625rem",
       },
       borderRadius: {
-        xl: "1.5rem",
-        lg: "1rem",
-        md: "0.75rem",
-        DEFAULT: "0.5rem",
-        sm: "0.25rem",
+        xl: "0.75rem",    /* 12px */
+        lg: "0.5rem",     /* 8px */
+        md: "0.375rem",   /* 6px */
+        DEFAULT: "0.25rem", /* 4px */
+        sm: "0.125rem",   /* 2px */
         full: "9999px",
       },
       spacing: {
-        base: "4px",
-        xs: "4px",
-        sm: "8px",
-        md: "16px",
-        lg: "32px",
-        xl: "64px",
-        gutter: "16px",
-        "margin-mobile": "16px",
-        "margin-desktop": "32px",
-        "container-max": "1400px",
-      },
-      keyframes: {
-        "accordion-down": {
-          from: { height: "0" },
-          to: { height: "var(--radix-accordion-content-height)" },
-        },
-        "accordion-up": {
-          from: { height: "var(--radix-accordion-content-height)" },
-          to: { height: "0" },
-        },
-        "h-scroll": {
-          "0%": { transform: "translateX(0)" },
-          "100%": { transform: "translateX(-50%)" },
-        },
-        float: {
-          "0%, 100%": { transform: "translateY(0px)" },
-          "50%": { transform: "translateY(-10px)" },
-        },
-        "spin-slow": {
-          from: { transform: "rotate(0deg)" },
-          to: { transform: "rotate(360deg)" },
-        },
-      },
-      animation: {
-        "accordion-down": "accordion-down 0.2s ease-out",
-        "accordion-up": "accordion-up 0.2s ease-out",
-        "h-scroll": "h-scroll 45s linear infinite",
-        float: "float 6s ease-in-out infinite",
-        "spin-slow": "spin-slow 8s linear infinite",
+        base: "8px",
+        gutter: "24px",
+        "margin-desktop": "64px",
+        "margin-mobile": "20px",
       },
       fontFamily: {
-        sans: ["var(--font-roboto)", "sans-serif"],
-        display: ["var(--font-orbitron)", "monospace"],
+        anybody: ["var(--font-anybody)", "sans-serif"],
+        hanken: ["var(--font-hanken)", "sans-serif"],
+        jetbrains: ["var(--font-jetbrains)", "monospace"],
+        sans: ["var(--font-hanken)", "sans-serif"],
+        display: ["var(--font-anybody)", "sans-serif"],
+      },
+      backgroundImage: {
+        "glow-conic": "conic-gradient(from 180deg at 50% 50%, #0022FF 0deg, #FFD700 180deg, #0022FF 360deg)",
+      },
+      boxShadow: {
+        "bloom-primary": "0 0 20px rgba(0, 34, 255, 0.15)",
+        "bloom-secondary": "0 0 20px rgba(255, 215, 0, 0.15)",
       },
     },
   },
-  plugins: [require("tailwindcss-animate")],
+  plugins: [animate],
 } satisfies Config
 
 export default config

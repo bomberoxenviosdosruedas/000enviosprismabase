@@ -56,7 +56,7 @@ export function ExpressPricingRanges({ priceRanges }: ExpressPricingRangesProps)
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
           >
-            <h2 className="font-display text-display-lg md:text-[60px] font-black italic mb-6 uppercase text-foreground tracking-tighter">
+            <h2 className="font-display text-display-lg text-display-lg font-black italic mb-6 uppercase text-foreground tracking-tighter">
               TARIFAS 2026 <span className="text-primary">ENVÍOS EXPRESS</span>
             </h2>
             <div className="w-32 h-1.5 bg-primary mx-auto mb-8" />
@@ -75,7 +75,7 @@ export function ExpressPricingRanges({ priceRanges }: ExpressPricingRangesProps)
               viewport={{ once: true }}
               transition={{ delay: index * 0.1 }}
             >
-              <Card className="relative bg-[#0a0d16]/60 border-white/10 hover:border-primary/50 transition-all duration-300 rounded-3xl overflow-hidden h-full flex flex-col group shadow-xl">
+              <Card className="relative bg-[background]/60 border-white/10 hover:border-primary/50 transition-all duration-300 rounded-3xl overflow-hidden h-full flex flex-col group shadow-xl">
                 <Badge className="absolute top-0 right-0 bg-primary text-slate-900 border-none py-1 px-4 rounded-none text-xxs font-bold uppercase tracking-widest">
                   Tarifa 2026
                 </Badge>
@@ -120,7 +120,7 @@ export function ExpressPricingRanges({ priceRanges }: ExpressPricingRangesProps)
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
           >
-            <div className="bg-[#0a0d16]/60 border border-white/10 rounded-3xl overflow-hidden p-8 md:p-16 shadow-2xl relative">
+            <div className="bg-[background]/60 border border-white/10 rounded-3xl overflow-hidden p-8 md:p-16 shadow-2xl relative">
                <div className="grid lg:grid-cols-3 gap-12 items-center">
                   <div className="lg:col-span-2">
                     <div className="inline-flex items-center gap-2 px-4 py-1 bg-secondary text-black text-xxs font-bold tracking-widest mb-6 uppercase">
@@ -163,7 +163,7 @@ export function ExpressPricingRanges({ priceRanges }: ExpressPricingRangesProps)
                <h4 className="font-display font-bold text-foreground text-headline-lg uppercase tracking-tight">Condiciones del Servicio Express</h4>
             </div>
 
-            <Accordion type="single" collapsible className="w-full bg-[#0a0d16]/60 border border-white/10 rounded-xl overflow-hidden">
+            <Accordion type="single" collapsible className="w-full bg-[background]/60 border border-white/10 rounded-xl overflow-hidden">
               <AccordionItem value="item-1" className="border-white/10 px-6">
                 <AccordionTrigger className="text-foreground hover:no-underline font-sans uppercase text-sm font-bold tracking-wider">
                   Tiempos y Tolerancia

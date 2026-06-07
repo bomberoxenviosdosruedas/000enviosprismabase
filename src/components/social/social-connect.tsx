@@ -11,7 +11,7 @@ export function SocialConnect() {
       icon: Facebook,
       handle: "@enviosdosruedas",
       description: "Seguinos en Facebook para ofertas exclusivas y actualizaciones diarias de nuestros servicios en Mar del Plata.",
-      color: "bg-[#1877F2]",
+      color: "bg-facebook",
       url: "https://facebook.com/enviosdosruedas",
       followers: "2.5K+",
     },
@@ -29,7 +29,7 @@ export function SocialConnect() {
       icon: null,
       handle: "+54 9 223 660-2699",
       description: "Atención directa por WhatsApp. Canal personalizado para cotizaciones y pedidos inmediatos.",
-      color: "bg-[#25D366]",
+      color: "bg-whatsapp",
       url: "https://wa.me/5492236602699?text=Hola%20Envios%20DosRuedas,%20vengo%20desde%20la%20web.",
       followers: "Atención 24/7",
     },
@@ -49,7 +49,7 @@ export function SocialConnect() {
           {socialNetworks.map((network) => {
             const IconComponent = network.icon
             return (
-              <Card key={network.name} className="group hover:shadow-2xl transition-all duration-500 border-white/10 bg-[#0a0d16]/60 backdrop-blur-md overflow-hidden rounded-3xl hover:-translate-y-2">
+              <Card key={network.name} className="group hover:shadow-2xl transition-all duration-500 border-white/10 bg-[background]/60 backdrop-blur-md overflow-hidden rounded-3xl hover:-translate-y-2">
                 <CardContent className="p-10 flex flex-col h-full items-center text-center">
                   <div className={cn("w-20 h-20 rounded-2xl flex items-center justify-center mb-8 transform group-hover:rotate-12 group-hover:scale-110 transition-all duration-500 shadow-lg relative", network.color)}>
                     <div className="absolute inset-0 bg-white/20 opacity-0 group-hover:opacity-100 transition-opacity rounded-2xl"></div>

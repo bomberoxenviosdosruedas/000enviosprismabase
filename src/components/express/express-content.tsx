@@ -28,7 +28,7 @@ export function ExpressContent() {
             <div className="inline-flex items-center gap-2 px-4 py-1 bg-primary text-slate-900 text-label-sm font-bold tracking-widest mb-8 uppercase">
               SOLUCIONES PREMIUM
             </div>
-            <h2 className="font-display text-display-lg md:text-[60px] font-black leading-[1] mb-10 uppercase text-foreground tracking-tighter">
+            <h2 className="font-display text-display-lg text-display-lg font-black leading-[1] mb-10 uppercase text-foreground tracking-tighter">
               ENTREGAS RÁPIDAS Y <br />
               <span className="text-primary italic">EFICIENTES</span>
             </h2>

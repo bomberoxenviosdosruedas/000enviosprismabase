@@ -12,7 +12,7 @@ export default function HeroAnimado() {
       <HeroBackground />
 
       <div className="max-w-7xl mx-auto w-full grid grid-cols-1 lg:grid-cols-12 gap-16 items-center relative z-10">
-        <div className="lg:col-span-7 text-center lg:text-left">
+        <div className="lg:col-span-7 text-left">
           {/* Badge - Animation with CSS */}
           <div className="inline-flex items-center gap-3 px-4 py-2 rounded-full bg-white/[0.03] backdrop-blur-md border border-white/10 text-blue-400 text-xxs font-black tracking-[0.3em] mb-8 uppercase animate-in fade-in slide-in-from-bottom-4 duration-1000 fill-mode-both">
             <span className="relative flex h-2 w-2">
@@ -30,7 +30,7 @@ export default function HeroAnimado() {
             Somos tu solución confiable en servicios de mensajería y delivery en Mar del Plata. Ofrecemos soluciones rápidas, seguras y económicas para todas tus necesidades de envío.
           </p>
 
-          <div className="flex flex-col sm:flex-row gap-6 justify-center lg:justify-start items-center animate-in fade-in slide-in-from-bottom-4 duration-1000 delay-700 fill-mode-both">
+          <div className="flex flex-col sm:flex-row gap-6 justify-start items-center animate-in fade-in slide-in-from-bottom-4 duration-1000 delay-700 fill-mode-both">
             <Link
               href="/cotizar/express"
               aria-label="Solicitar Servicio de mensajería desde el héroe"
@@ -54,7 +54,7 @@ export default function HeroAnimado() {
             </Link>
           </div>
 
-          <div className="mt-10 lg:mt-12 flex flex-wrap items-center justify-center lg:justify-start gap-x-8 gap-y-4 animate-in fade-in slide-in-from-bottom-4 duration-1000 delay-1000 fill-mode-both">
+          <div className="mt-10 lg:mt-12 flex flex-wrap items-center justify-start gap-x-8 gap-y-4 animate-in fade-in slide-in-from-bottom-4 duration-1000 delay-1000 fill-mode-both">
             <div className="flex items-center gap-2 text-label-sm uppercase text-white/40">
               <ShieldCheck size={14} className="text-primary" /> 100% SEGURO
             </div>

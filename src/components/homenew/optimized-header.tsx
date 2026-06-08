@@ -16,20 +16,20 @@ export const OptimizedHeader = () => {
     <HeaderContainer>
       {/* Logo Section - RSC */}
       <Link href="/" className="flex items-center space-x-2 sm:space-x-3 group shrink-0 min-w-0" aria-label="Volver al inicio desde la cabecera">
-        <div className="relative w-8 h-8 sm:w-10 sm:h-10 rounded-xl flex items-center justify-center transition-all group-hover:rotate-6 group-hover:scale-110 drop-shadow-[0_0_10px_rgba(37,99,235,0.4)]">
+        <div className="relative w-8 h-8 sm:w-10 sm:h-10 rounded-xl flex items-center justify-center transition-all group-hover:rotate-6 group-hover:scale-110 ">
           <Image src="/LogoEnviosDosRuedas.webp" alt="Logo Dos Ruedas" fill className="object-contain" priority sizes="(max-width: 768px) 32px, 40px" />
         </div>
         <span className="font-display text-orbitron font-black text-sm sm:text-lg md:text-2xl tracking-tighter text-white uppercase italic whitespace-nowrap">
-          Envíos<span className="text-secondary drop-shadow-[0_0_10px_rgba(255,230,0,0.35)]">Dosruedas</span>
+          Envíos<span className="text-secondary ">Dosruedas</span>
         </span>
       </Link>
 
       {/* Desktop Navigation - RSC & Client Components for Interaction */}
-      <nav className="hidden lg:flex items-center space-x-2 bg-white/[0.03] backdrop-blur-md border border-white/10 rounded-2xl p-1.5 shadow-2xl">
+      <nav className="hidden lg:flex items-center space-x-2 bg-white/[0.03] backdrop-blur-md border border-white/10 rounded-2xl p-1.5 ">
         <ActiveLink 
           href="/" 
           className="text-gray-300 hover:text-white hover:bg-white/10"
-          activeClassName="bg-primary/20 text-blue-400 border border-primary/30 shadow-lg"
+          activeClassName="bg-primary/20 text-blue-400 border border-primary/30 "
         >
           <House className="h-4 w-4" />
           <span>Inicio</span>
@@ -42,7 +42,7 @@ export const OptimizedHeader = () => {
         <ActiveLink 
           href="/contacto" 
           className="text-gray-300 hover:text-white hover:bg-white/10"
-          activeClassName="bg-primary/20 text-blue-400 border border-primary/30 shadow-lg"
+          activeClassName="bg-primary/20 text-blue-400 border border-primary/30 "
         >
           <Envelope className="h-4 w-4" />
           <span>Contacto</span>

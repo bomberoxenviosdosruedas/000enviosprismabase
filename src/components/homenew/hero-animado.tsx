@@ -23,7 +23,7 @@ export default function HeroAnimado() {
           </div>
 
           <h1 className="text-headline-lg-mobile md:text-display-lg italic mb-4 xl:mb-6 uppercase text-white animate-in fade-in slide-in-from-bottom-8 duration-1000 delay-200 fill-mode-both">
-            Mensajería y <span className="text-blue-400 drop-shadow-[0_0_25px_rgba(96,165,250,0.4)]">Logística E-Commerce</span> en <span className="text-secondary italic drop-shadow-[0_0_20px_rgba(234,179,8,0.2)]">Mar del Plata</span>
+            Mensajería y <span className="text-blue-400 ">Logística E-Commerce</span> en <span className="text-secondary italic ">Mar del Plata</span>
           </h1>
 
           <p className="text-gray-400 text-body-lg mb-8 xl:mb-10 max-w-2xl mx-auto lg:mx-0 animate-in fade-in slide-in-from-bottom-4 duration-1000 delay-500 fill-mode-both">

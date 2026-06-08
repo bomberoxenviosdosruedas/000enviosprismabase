@@ -4,74 +4,90 @@
 
 @layer base {
   :root {
-    /* Nueva paleta basada en azul solicitada */
-    --background: 210 20% 98%;    /* #f5f7fa */
-    --foreground: 228 30% 15%;   /* #1a2238 */
+    /* Base Palette */
+    --background: 240 10% 3.9%;
+    --foreground: 0 0% 98%;
 
-    --primary: 221 47% 43%;     /* #3a5ba0 */
-    --primary-foreground: 54 100% 95%; /* #fffbe6 */
+    --primary: 221 47% 43%;
+    --primary-foreground: 54 100% 95%;
 
-    --secondary: 40 90% 72%;    /* #f7c873 */
+    --secondary: 40 90% 72%;
     --secondary-foreground: 228 30% 15%;
 
-    --card: 220 25% 92%;        /* #e3eaf2 */
-    --card-foreground: 228 30% 15%;
+    --card: 240 10% 3.9%;
+    --card-foreground: 0 0% 98%;
 
-    --popover: 54 100% 95%;     /* #fffbe6 */
-    --popover-foreground: 228 30% 15%;
+    --popover: 240 10% 3.9%;
+    --popover-foreground: 0 0% 98%;
 
-    --muted: 60 10% 90%;        /* #e5e5df */
-    --muted-foreground: 221 47% 43%; /* Azul como muted */
+    --muted: 240 3.7% 15.9%;
+    --muted-foreground: 240 5% 64.9%;
 
-    --accent: 202 33% 59%;      /* #6ea3c1 */
-    --accent-foreground: 54 100% 95%;
+    --accent: 240 3.7% 15.9%;
+    --accent-foreground: 0 0% 98%;
 
-    --destructive: 279 22% 15%; /* #2d1e2f */
-    --destructive-foreground: 54 100% 95%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
 
-    --border: 216 10% 70%;       /* #b0b8c1 */
-    --input: 202 33% 59%;
-    --ring: 40 90% 72%;
+    --border: 240 3.7% 15.9%;
+    --input: 240 3.7% 15.9%;
+    --ring: 240 4.9% 83.9%;
 
     --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 240 10% 3.9%;
+    --foreground: 0 0% 98%;
+    --primary: 221 47% 43%;
+    --primary-foreground: 54 100% 95%;
+    --card: 240 10% 3.9%;
+    --card-foreground: 0 0% 98%;
+    --popover: 240 10% 3.9%;
+    --popover-foreground: 0 0% 98%;
+    --muted: 240 3.7% 15.9%;
+    --muted-foreground: 240 5% 64.9%;
+    --accent: 240 3.7% 15.9%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 240 3.7% 15.9%;
+    --input: 240 3.7% 15.9%;
+    --ring: 240 4.9% 83.9%;
   }
 
   body {
     background-color: hsl(var(--background));
     color: hsl(var(--foreground));
-    font-family: 'Libre Baskerville', serif;
+    font-family: var(--font-geist), sans-serif;
   }
 }
 
-/* Scrollbar actualizado con tonos azules */
+/* Scrollbar */
 ::-webkit-scrollbar {
   width: 8px;
 }
 ::-webkit-scrollbar-track {
-  background: #e3eaf2;
+  background: hsl(var(--muted));
 }
 ::-webkit-scrollbar-thumb {
-  background: #3a5ba0;
+  background: hsl(var(--primary));
   border-radius: 4px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #2b3fff;
+  background: hsl(var(--accent));
 }
 
 /* Focus styles */
 *:focus-visible {
-  outline: 2px solid #3a5ba0;
+  outline: 2px solid hsl(var(--primary));
   outline-offset: 2px;
 }
 
 @layer utilities {
   .glass-panel {
-    background: rgba(227, 234, 242, 0.7);
+    background: rgba(24, 24, 27, 0.7);
     backdrop-filter: blur(12px);
-    border: 1px solid rgba(176, 184, 193, 0.5);
-  }
-
-  .glow-primary {
-    box-shadow: 0 0 20px rgba(58, 91, 160, 0.15);
+    border: 1px solid rgba(63, 63, 70, 0.5);
   }
 }

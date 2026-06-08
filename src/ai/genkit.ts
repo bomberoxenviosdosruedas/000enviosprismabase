@@ -15,11 +15,11 @@ if (!apiKey) {
 export const ai = genkit({
   plugins: [googleAI({ apiKey })],
   // Modelo por defecto equilibrado y de ultra-baja latencia
-  model: "googleai/gemini-2.5-flash",
+  model: "googleai/gemini-2.0-flash",
 });
 
 // 3. Exportación de alias de modelos para usarlos fácilmente en tus flows
 export const models = {
-  flash: "googleai/gemini-2.5-flash", // Velocidad y eficiencia para rutas en tiempo real
-  pro: "googleai/gemini-2.5-pro", // Máxima inteligencia para lógicas complejas
+  flash: "googleai/gemini-2.0-flash", // Velocidad y eficiencia para rutas en tiempo real
+  pro: "googleai/gemini-2.0-pro", // Máxima inteligencia para lógicas complejas
 };

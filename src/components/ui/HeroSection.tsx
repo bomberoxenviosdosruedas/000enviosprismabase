@@ -63,14 +63,14 @@ export function HeroSection({
   description,
   ctaButtons,
   backgroundType = 'shader',
-  backgroundColor = 'bg-surface-light',
-  backgroundGradient = 'bg-gradient-to-br from-primary to-primary/80',
+  backgroundColor = 'bg-blue-50',
+  backgroundGradient = 'bg-gradient-to-br from-primary to-blue-200',
   backgroundImageUrl = '/bannerenvios.webp',
   backgroundImageAlt = 'Hero background image',
   backgroundOverlayOpacity = 0.2,
-  textColorClassName = 'text-white',
-  titleClassName = 'text-3xl sm:text-4xl md:text-7xl font-black italic tracking-tighter leading-[0.9] mb-8 uppercase text-white font-display',
-  descriptionClassName = 'text-gray-300 text-lg md:text-xl mb-12 max-w-xl mx-auto leading-relaxed font-sans',
+  textColorClassName = 'text-foreground',
+  titleClassName = 'text-3xl sm:text-4xl md:text-7xl font-black italic tracking-tighter leading-[0.9] mb-8 uppercase text-foreground font-display',
+  descriptionClassName = 'text-muted-foreground text-lg md:text-xl mb-12 max-w-xl mx-auto leading-relaxed font-sans',
   visualElement,
   layout = 'center-stacked',
   minHeight = 'min-h-[100dvh]',
@@ -84,7 +84,7 @@ export function HeroSection({
   let bgClasses = '';
   if (backgroundType === 'color') bgClasses = backgroundColor;
   else if (backgroundType === 'gradient') bgClasses = backgroundGradient;
-  else if (backgroundType === 'image') bgClasses = 'bg-surface-light';
+  else if (backgroundType === 'image') bgClasses = 'bg-blue-50';
 
   const sectionClasses = cn(
     'relative flex items-center overflow-hidden pt-24 pb-12 md:pt-24 md:pb-20 px-6',
@@ -105,8 +105,8 @@ export function HeroSection({
       {preTitle && (
         <div className="mb-8">
           {typeof preTitle === 'string' ? (
-             <div className="inline-flex items-center gap-2 px-4 py-2 bg-primary text-slate-900 text-xs font-bold tracking-widest uppercase">
-                <div className="w-2 h-2 bg-white animate-pulse" />
+             <div className="inline-flex items-center gap-2 px-4 py-2 bg-primary text-blue-950 text-xs font-bold tracking-widest uppercase">
+                <div className="w-2 h-2 bg-foreground animate-pulse" />
                 {preTitle}
              </div>
           ) : preTitle}
@@ -156,7 +156,7 @@ export function HeroSection({
                     'px-10 py-5 font-sans font-bold rounded-none transition-all uppercase tracking-tight h-auto',
                     isYellowButton
                       ? "bg-secondary hover:bg-[#d97706] text-black shadow-lg"
-                      : "bg-slate-900 border border-slate-800 text-white hover:bg-slate-800",
+                      : "bg-blue-950 border border-blue-900 text-white hover:bg-blue-900",
                     button.className
                   )}
                 >
@@ -175,15 +175,13 @@ export function HeroSection({
 
   return (
     <section className={sectionClasses}>
-      {/* Mesh Gradient Shader Background with contrast overlay */}
       {backgroundType === 'shader' && (
         <>
           <MeshGradientBackground />
-          <div className="absolute inset-0 bg-[background]/40 backdrop-blur-[1px] pointer-events-none z-0" />
+          <div className="absolute inset-0 bg-blue-50/40 backdrop-blur-[1px] pointer-events-none z-0" />
         </>
       )}
 
-      {/* Background Image with Overlay */}
       {backgroundType === 'image' && backgroundImageUrl && (
         <div className="absolute inset-0 z-0">
           <Image
@@ -193,7 +191,7 @@ export function HeroSection({
             className="object-cover opacity-10"
             priority={priority}
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-surface-light via-transparent to-surface-light" />
+          <div className="absolute inset-0 bg-gradient-to-b from-blue-50 via-transparent to-blue-50" />
         </div>
       )}
 

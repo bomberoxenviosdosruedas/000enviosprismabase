@@ -11,7 +11,7 @@ function ElegantShape({
   width = 400,
   height = 100,
   rotate = 0,
-  gradient = "from-white/[0.08]",
+  gradient = "from-blue-200/[0.2]",
 }: {
   className?: string
   delay?: number
@@ -60,10 +60,10 @@ function ElegantShape({
             "absolute inset-0 rounded-full",
             "bg-gradient-to-r to-transparent",
             gradient,
-            "backdrop-blur-[2px] border-2 border-white/[0.15]",
-            "shadow-[0_8px_32px_0_rgba(255,255,255,0.1)]",
+            "backdrop-blur-[2px] border-2 border-blue-100/[0.3]",
+            "shadow-[0_8px_32px_0_rgba(191,219,254,0.3)]",
             "after:absolute after:inset-0 after:rounded-full",
-            "after:bg-[radial-gradient(circle_at_50%_50%,rgba(255,255,255,0.2),transparent_70%)]",
+            "after:bg-[radial-gradient(circle_at_50%_50%,rgba(191,219,254,0.4),transparent_70%)]",
           )}
         />
       </motion.div>
@@ -94,8 +94,8 @@ export default function HeroGeometric({
   }
 
   return (
-    <div className="relative min-h-[100dvh] w-full flex items-center justify-center overflow-hidden bg-[var(--background)]">
-      <div className="absolute inset-0 bg-gradient-to-br from-[var(--primary)]/[0.1] via-transparent to-[var(--primary)]/[0.05] blur-3xl" />
+    <div className="relative min-h-[100dvh] w-full flex items-center justify-center overflow-hidden bg-blue-50">
+      <div className="absolute inset-0 bg-gradient-to-br from-blue-100/[0.4] via-transparent to-blue-100/[0.2] blur-3xl" />
 
       <div className="absolute inset-0 overflow-hidden">
         <ElegantShape
@@ -103,7 +103,7 @@ export default function HeroGeometric({
           width={600}
           height={140}
           rotate={12}
-          gradient="from-[var(--primary)]/[0.15]"
+          gradient="from-blue-200/[0.3]"
           className="left-[-10%] md:left-[-5%] top-[15%] md:top-[20%]"
         />
 
@@ -112,7 +112,7 @@ export default function HeroGeometric({
           width={500}
           height={120}
           rotate={-15}
-          gradient="from-[var(--tertiary)]/[0.15]"
+          gradient="from-blue-300/[0.3]"
           className="right-[-5%] md:right-[0%] top-[70%] md:top-[75%]"
         />
 
@@ -121,7 +121,7 @@ export default function HeroGeometric({
           width={300}
           height={80}
           rotate={-8}
-          gradient="from-[var(--primary)]/[0.15]"
+          gradient="from-blue-200/[0.3]"
           className="left-[5%] md:left-[10%] bottom-[5%] md:bottom-[10%]"
         />
 
@@ -130,7 +130,7 @@ export default function HeroGeometric({
           width={200}
           height={60}
           rotate={20}
-          gradient="from-[var(--tertiary)]/[0.15]"
+          gradient="from-blue-300/[0.3]"
           className="right-[15%] md:right-[20%] top-[10%] md:top-[15%]"
         />
 
@@ -139,7 +139,7 @@ export default function HeroGeometric({
           width={150}
           height={40}
           rotate={-25}
-          gradient="from-[var(--primary)]/[0.15]"
+          gradient="from-blue-200/[0.3]"
           className="left-[20%] md:left-[25%] top-[5%] md:top-[10%]"
         />
       </div>
@@ -156,25 +156,25 @@ export default function HeroGeometric({
             <div className="hidden md:block mb-6">
               <Image src="/LogoEnviosDosRuedas.webp" alt="Logo" width={100} height={100} className="rounded-full" />
             </div>
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass-card border border-white/[0.08]">
-              <Sparkle className="w-4 h-4 text-secondary" />
-              <span className="text-sm font-medium text-slate-800">{badge}</span>
-              <Lightning className="w-4 h-4 text-primary" />
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/50 backdrop-blur-sm border border-blue-200">
+              <Sparkle className="w-4 h-4 text-blue-600" />
+              <span className="text-sm font-medium text-blue-900">{badge}</span>
+              <Lightning className="w-4 h-4 text-blue-500" />
             </div>
           </motion.div>
 
           <motion.div custom={1} variants={fadeUpVariants} initial="hidden" animate="visible">
             <h1 className="text-4xl sm:text-6xl md:text-8xl font-bold mb-6 md:mb-8 tracking-tight font-display">
-              <span className="bg-clip-text text-transparent bg-gradient-to-b from-white to-white/80">{title1}</span>
+              <span className="bg-clip-text text-transparent bg-gradient-to-b from-blue-900 to-blue-700">{title1}</span>
               <br />
-              <span className="primary-gradient-text">
+              <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-blue-400">
                 {title2}
               </span>
             </h1>
           </motion.div>
 
           <motion.div custom={2} variants={fadeUpVariants} initial="hidden" animate="visible">
-            <p className="text-base sm:text-lg md:text-xl text-slate-600 mb-8 leading-relaxed font-light tracking-wide max-w-xl mx-auto px-4 font-sans">
+            <p className="text-base sm:text-lg md:text-xl text-blue-800/80 mb-8 leading-relaxed font-light tracking-wide max-w-xl mx-auto px-4 font-sans">
               Somos tu solución confiable en servicios de mensajería y delivery en Mar del Plata. Ofrecemos soluciones
               rápidas, seguras y económicas para todas tus necesidades de envío.
             </p>
@@ -182,7 +182,7 @@ export default function HeroGeometric({
         </div>
       </div>
 
-      <div className="absolute inset-0 bg-gradient-to-t from-[var(--background)] via-transparent to-[var(--background)]/80 pointer-events-none" />
+      <div className="absolute inset-0 bg-gradient-to-t from-blue-50 via-transparent to-blue-50/80 pointer-events-none" />
     </div>
   )
 }

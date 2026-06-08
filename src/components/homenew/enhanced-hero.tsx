@@ -1,4 +1,3 @@
-
 "use client"
 
 import { useEffect, useRef, useCallback, useState } from "react"
@@ -293,20 +292,20 @@ export function EnhancedHero() {
   }, [setupScene])
 
   return (
-    <section className="min-h-[100dvh] w-full relative flex items-center justify-center overflow-hidden hero-gradient-bg pt-20 md:pt-24">
+    <section className="min-h-[100dvh] w-full relative flex items-center justify-center overflow-hidden bg-blue-50/50 pt-20 md:pt-24">
       {/* 3D Background */}
       <div ref={containerRef} className="absolute inset-0" />
 
       {/* Gradient Overlays */}
-      <div className="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-transparent to-slate-900/40 z-10" />
-      <div className="absolute inset-0 bg-gradient-to-r from-blue-900/20 via-transparent to-purple-900/20 z-10" />
+      <div className="absolute inset-0 bg-gradient-to-t from-blue-100/80 via-transparent to-blue-50/40 z-10" />
+      <div className="absolute inset-0 bg-gradient-to-r from-blue-900/10 via-transparent to-blue-900/10 z-10" />
 
       {/* Animated Background Elements */}
       <div className="absolute inset-0 z-10">
         {randomValues.map((vals, i) => (
           <motion.div
             key={i}
-            className="absolute w-2 h-2 bg-yellow-400/30 rounded-full"
+            className="absolute w-2 h-2 bg-blue-400/30 rounded-full"
             animate={{
               x: [0, dimensions.width],
               y: [vals.y1, vals.y2],
@@ -327,7 +326,7 @@ export function EnhancedHero() {
 
       {/* Main Content */}
       <motion.div
-        className="relative z-20 flex flex-col items-center text-center p-6 text-slate-900 max-w-5xl mx-auto"
+        className="relative z-20 flex flex-col items-center text-center p-6 text-foreground max-w-5xl mx-auto"
         style={{ y, opacity }}
         initial={{ opacity: 0, y: 50 }}
         animate={{ opacity: isLoaded ? 1 : 0, y: isLoaded ? 0 : 50 }}
@@ -349,7 +348,7 @@ export function EnhancedHero() {
           <div className="relative p-2">
             {/* Animated rings */}
             <motion.div
-              className="absolute inset-0 rounded-full border-2 border-yellow-400/40"
+              className="absolute inset-0 rounded-full border-2 border-blue-400/40"
               animate={{
                 rotate: 360,
                 scale: [1, 1.1, 1],
@@ -360,7 +359,7 @@ export function EnhancedHero() {
               }}
             />
             <motion.div
-              className="absolute inset-2 rounded-full border border-blue-400/30"
+              className="absolute inset-2 rounded-full border border-blue-600/30"
               animate={{
                 rotate: -360,
                 scale: [1, 0.95, 1],
@@ -373,7 +372,7 @@ export function EnhancedHero() {
 
             {/* Glow effect */}
             <motion.div
-              className="absolute inset-0 rounded-full bg-gradient-to-r from-yellow-400/20 via-blue-400/20 to-purple-400/20 blur-xl"
+              className="absolute inset-0 rounded-full bg-gradient-to-r from-blue-400/20 via-blue-200/20 to-blue-500/20 blur-xl"
               animate={{
                 opacity: [0.3, 0.8, 0.3],
                 scale: [1, 1.2, 1],
@@ -390,7 +389,7 @@ export function EnhancedHero() {
               alt="Envios DosRuedas Logo"
               width={160}
               height={160}
-              className="w-32 h-32 sm:w-40 sm:h-40 rounded-full shadow-2xl relative z-10 ring-4 ring-white/20"
+              className="w-32 h-32 sm:w-40 sm:h-40 rounded-full shadow-2xl relative z-10 ring-4 ring-white/50"
               priority
             />
 
@@ -398,7 +397,7 @@ export function EnhancedHero() {
             {[...Array(8)].map((_, i) => (
               <motion.div
                 key={i}
-                className="absolute w-1 h-1 bg-yellow-400 rounded-full"
+                className="absolute w-1 h-1 bg-blue-500 rounded-full"
                 animate={{
                   x: [0, Math.cos((i * Math.PI) / 4) * 80],
                   y: [0, Math.sin((i * Math.PI) / 4) * 80],
@@ -429,16 +428,16 @@ export function EnhancedHero() {
           transition={{ delay: 0.6, duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
         >
           <motion.div
-            className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-yellow-400/20 to-blue-400/20 border border-white/20 backdrop-blur-sm mb-4"
-            whileHover={{ scale: 1.05, backgroundColor: "rgba(255, 255, 255, 0.1)" }}
+            className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-100/50 border border-blue-200 backdrop-blur-sm mb-4"
+            whileHover={{ scale: 1.05, backgroundColor: "rgba(219, 234, 254, 0.6)" }}
           >
-            <Sparkle className="w-4 h-4 text-yellow-400" />
-            <span className="text-sm font-medium text-slate-800">Tu Solución Confiable</span>
-            <Lightning className="w-4 h-4 text-blue-400" />
+            <Sparkle className="w-4 h-4 text-blue-600" />
+            <span className="text-sm font-medium text-blue-900">Tu Solución Confiable</span>
+            <Lightning className="w-4 h-4 text-blue-600" />
           </motion.div>
 
           <motion.h1
-            className="text-4xl md:text-6xl lg:text-7xl font-bold bg-gradient-to-r from-white via-blue-100 to-yellow-100 bg-clip-text text-transparent leading-tight"
+            className="text-4xl md:text-6xl lg:text-7xl font-bold bg-gradient-to-r from-blue-900 via-blue-600 to-blue-400 bg-clip-text text-transparent leading-tight"
             animate={{
               backgroundPosition: ["0% 50%", "100% 50%", "0% 50%"],
             }}
@@ -457,15 +456,15 @@ export function EnhancedHero() {
 
         {/* Description */}
         <motion.p
-          className="max-w-3xl text-lg md:text-xl text-slate-700 leading-relaxed mb-10 font-light"
+          className="max-w-3xl text-lg md:text-xl text-muted-foreground leading-relaxed mb-10 font-light"
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.8, duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
         >
           Somos tu solución confiable en servicios de mensajería y delivery en Mar del Plata. Ofrecemos soluciones{" "}
-          <span className="text-yellow-400 font-medium">rápidas</span>,
-          <span className="text-blue-400 font-medium"> seguras</span> y
-          <span className="text-purple-400 font-medium"> económicas</span> para todas tus necesidades de envío.
+          <span className="text-blue-600 font-medium">rápidas</span>,
+          <span className="text-blue-600 font-medium"> seguras</span> y
+          <span className="text-blue-600 font-medium"> económicas</span> para todas tus necesidades de envío.
         </motion.p>
 
         {/* CTA Buttons */}
@@ -479,7 +478,7 @@ export function EnhancedHero() {
             <Button
               asChild
               size="lg"
-              variant="gradient"
+              variant="default"
               className="px-8 py-4 text-lg rounded-full"
             >
               <Link href="/cotizar/express" className="flex items-center gap-3">
@@ -497,7 +496,7 @@ export function EnhancedHero() {
               asChild
               size="lg"
               variant="outline"
-              className="border-2 border-slate-300 text-slate-900 hover:bg-slate-100 hover:text-slate-900 font-bold shadow-2xl px-8 py-4 text-lg rounded-full backdrop-blur-sm transition-all duration-300 bg-transparent"
+              className="border-2 border-blue-200 text-blue-900 hover:bg-blue-50 hover:text-blue-950 font-bold shadow-sm px-8 py-4 text-lg rounded-full backdrop-blur-sm transition-all duration-300 bg-transparent"
             >
               <Link href="/contacto" className="flex items-center gap-3">
                 <Envelope className="w-5 h-5" />
@@ -509,7 +508,7 @@ export function EnhancedHero() {
 
         {/* Scroll Indicator */}
         <motion.div
-          className="flex flex-col items-center gap-2 text-slate-600"
+          className="flex flex-col items-center gap-2 text-muted-foreground"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 1.5, duration: 1 }}

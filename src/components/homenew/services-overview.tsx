@@ -21,48 +21,48 @@ type ServiceTheme = {
 
 const THEMES: Record<string, ServiceTheme> = {
   express: {
-    card: "bg-[background]/80 border-red-500/20 hover:border-red-500/40 shadow-2xl backdrop-blur-md",
-    icon: "bg-red-500/10 border border-red-500/20 text-red-400 drop-shadow-[0_0_15px_rgba(239,68,68,0.4)]",
-    accent: "text-red-400",
-    text: "text-white",
-    desc: "text-gray-400 [&>span]:text-white",
-    button: "text-gray-300 hover:text-white group-hover:text-red-400",
-    badge: "bg-red-500/10 text-red-400 border-red-500/20",
-    accentColor: "red-400",
-    glowColor: "rgba(239,68,68,0.1)"
+    card: "bg-white border-blue-100 hover:border-blue-200 shadow-xl",
+    icon: "bg-blue-50 border border-blue-100 text-blue-600",
+    accent: "text-blue-600",
+    text: "text-foreground",
+    desc: "text-muted-foreground [&>span]:text-foreground",
+    button: "text-muted-foreground hover:text-foreground group-hover:text-blue-600",
+    badge: "bg-blue-50 text-blue-600 border-blue-100",
+    accentColor: "blue-600",
+    glowColor: "rgba(37,99,235,0.05)"
   },
   lowcost: {
-    card: "bg-[background]/80 border-cyan-500/20 hover:border-cyan-500/40 shadow-2xl backdrop-blur-md",
-    icon: "bg-cyan-500/10 border border-cyan-500/20 text-cyan-400 drop-shadow-[0_0_15px_rgba(6,182,212,0.4)]",
-    accent: "text-cyan-400",
-    text: "text-white",
-    desc: "text-gray-400 [&>span]:text-white",
-    button: "text-gray-300 hover:text-white group-hover:text-cyan-400",
-    badge: "bg-cyan-500/10 text-cyan-400 border-cyan-500/20",
-    accentColor: "cyan-400",
-    glowColor: "rgba(6,182,212,0.1)"
+    card: "bg-white border-blue-100 hover:border-blue-200 shadow-xl",
+    icon: "bg-blue-50 border border-blue-100 text-blue-500",
+    accent: "text-blue-500",
+    text: "text-foreground",
+    desc: "text-muted-foreground [&>span]:text-foreground",
+    button: "text-muted-foreground hover:text-foreground group-hover:text-blue-500",
+    badge: "bg-blue-50 text-blue-500 border-blue-100",
+    accentColor: "blue-500",
+    glowColor: "rgba(59,130,246,0.05)"
   },
   meli: {
-    card: "bg-[background]/80 border-yellow-500/20 hover:border-yellow-500/40 shadow-2xl backdrop-blur-md",
-    icon: "bg-yellow-500/10 border border-yellow-500/20 text-yellow-400 drop-shadow-[0_0_15px_rgba(234,179,8,0.3)]",
-    accent: "text-yellow-400",
-    text: "text-white",
-    desc: "text-gray-400 [&>span]:text-yellow-400",
-    button: "text-gray-300 hover:text-white group-hover:text-yellow-400",
-    badge: "bg-yellow-500/10 text-yellow-400 border-yellow-500/20",
-    accentColor: "yellow-400",
-    glowColor: "rgba(234,179,8,0.1)"
+    card: "bg-white border-blue-100 hover:border-blue-200 shadow-xl",
+    icon: "bg-blue-50 border border-blue-100 text-blue-700",
+    accent: "text-blue-700",
+    text: "text-foreground",
+    desc: "text-muted-foreground [&>span]:text-blue-700",
+    button: "text-muted-foreground hover:text-foreground group-hover:text-blue-700",
+    badge: "bg-blue-50 text-blue-700 border-blue-100",
+    accentColor: "blue-700",
+    glowColor: "rgba(29,78,216,0.05)"
   },
   ecommerce: {
-    card: "bg-[background]/80 border-emerald-500/20 hover:border-emerald-500/40 shadow-2xl backdrop-blur-md",
-    icon: "bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 drop-shadow-[0_0_15px_rgba(16,185,129,0.3)]",
-    accent: "text-emerald-400",
-    text: "text-white",
-    desc: "text-gray-400 [&>span]:text-emerald-400",
-    button: "text-gray-300 hover:text-white group-hover:text-emerald-400",
-    badge: "bg-emerald-500/10 text-emerald-400 border-emerald-500/20",
-    accentColor: "emerald-500",
-    glowColor: "rgba(16,185,129,0.1)"
+    card: "bg-white border-blue-100 hover:border-blue-200 shadow-xl",
+    icon: "bg-blue-50 border border-blue-100 text-blue-800",
+    accent: "text-blue-800",
+    text: "text-foreground",
+    desc: "text-muted-foreground [&>span]:text-blue-800",
+    button: "text-muted-foreground hover:text-foreground group-hover:text-blue-800",
+    badge: "bg-blue-50 text-blue-800 border-blue-100",
+    accentColor: "blue-800",
+    glowColor: "rgba(30,64,175,0.05)"
   }
 };
 
@@ -130,13 +130,13 @@ export const ServicesOverview = () => {
   };
 
   return (
-    <section className="relative min-h-[100dvh] pt-28 pb-16 lg:pt-32 lg:pb-20 px-4 bg-transparent overflow-hidden">
+    <section className="relative min-h-[100dvh] pt-28 pb-16 lg:pt-32 lg:pb-20 px-4 bg-blue-50 overflow-hidden">
       {/* Ambient background glow */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full bg-primary/5 blur-[160px] pointer-events-none opacity-50" />
-      
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full bg-blue-200/20 blur-[160px] pointer-events-none opacity-50" />
+
       {/* Section Transition Lines */}
-      <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-white/10 to-transparent" />
-      <div className="absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-white/10 to-transparent" />
+      <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-blue-200 to-transparent" />
+      <div className="absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-blue-200 to-transparent" />
 
       <div className="max-w-7xl mx-auto w-full relative z-10">
         <div className="flex flex-col lg:flex-row lg:items-end justify-between mb-20 gap-10">
@@ -146,12 +146,12 @@ export const ServicesOverview = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
           >
-            <div className="inline-flex items-center gap-3 px-3 py-1.5 rounded-full glass-card border border-primary/20 text-blue-400 text-xxs font-black tracking-[0.2em] mb-8 uppercase">
+            <div className="inline-flex items-center gap-3 px-3 py-1.5 rounded-full bg-white border border-blue-200 text-blue-600 text-xxs font-black tracking-[0.2em] mb-8 uppercase shadow-sm">
               <span className="w-1.5 h-1.5 rounded-full bg-blue-500 animate-pulse" /> Nuestros Servicios
             </div>
-            <h2 className="text-headline-lg-mobile md:text-display-lg italic uppercase text-white">
+            <h2 className="text-headline-lg-mobile md:text-display-lg italic uppercase text-foreground">
               Soluciones <br />
-              <span className="text-primary drop-shadow-[0_0_20px_rgba(37,99,235,0.4)]">Logísticas</span>
+              <span className="text-primary">Logísticas</span>
             </h2>
           </motion.div>
 
@@ -160,9 +160,9 @@ export const ServicesOverview = () => {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8, delay: 0.1 }}
-            className="max-w-md lg:border-l lg:border-white/10 lg:pl-10"
+            className="max-w-md lg:border-l lg:border-blue-200 lg:pl-10"
           >
-            <p className="text-gray-400 text-body-lg">
+            <p className="text-muted-foreground text-body-lg">
               Infraestructura moderna para negocios que no se detienen. Inteligencia aplicada a cada kilómetro.
             </p>
           </motion.div>
@@ -183,14 +183,13 @@ export const ServicesOverview = () => {
                 variants={itemVariants}
                 whileHover={{ y: -10, transition: { duration: 0.3 } }}
                 className={cn(
-                  "group p-6 lg:p-10 rounded-xl lg:rounded-xl glass-card transition-all duration-500 flex flex-col justify-between relative overflow-hidden",
-                  theme.card,
+                  "group p-6 lg:p-10 rounded-xl lg:rounded-xl transition-all duration-500 flex flex-col justify-between relative overflow-hidden bg-white border border-blue-100 hover:border-blue-200 shadow-xl",
                   service.className
                 )}
               >
                 {/* Background Highlight on Hover */}
-                <div 
-                  className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" 
+                <div
+                  className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"
                   style={{ background: `radial-gradient(circle at top right, ${theme.glowColor}, transparent)` }}
                 />
 
@@ -229,12 +228,12 @@ export const ServicesOverview = () => {
                 </div>
 
                 {/* Decorative side border accent */}
-                <div className={cn("absolute top-1/2 -right-1 w-[2px] h-20 bg-gradient-to-b from-transparent via-white/10 to-transparent group-hover:via-current transition-all", theme.accent)} />
+                <div className={cn("absolute top-1/2 -right-1 w-[2px] h-20 bg-gradient-to-b from-transparent via-blue-200 to-transparent group-hover:via-current transition-all", theme.accent)} />
 
                 {/* Specific Visual for the first card */}
                 {idx === 0 && (
                   <div className="absolute top-10 right-10 opacity-5 group-hover:opacity-10 transition-opacity" aria-hidden="true">
-                    <Cursor size={120} className="rotate-12 text-white" />
+                    <Cursor size={120} className="rotate-12 text-blue-200" />
                   </div>
                 )}
               </motion.div>

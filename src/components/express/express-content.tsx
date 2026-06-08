@@ -20,19 +20,19 @@ export function ExpressContent() {
   ]
 
   return (
-    <section className="py-32 px-4 bg-background relative overflow-hidden border-t border-slate-900">
+    <section className="py-32 px-4 bg-blue-50 relative overflow-hidden border-t border-blue-100">
       <div className="container mx-auto max-w-7xl relative z-10">
         <div className="grid lg:grid-cols-2 gap-20 items-center">
           {/* Left Content */}
           <div>
-            <div className="inline-flex items-center gap-2 px-4 py-1 bg-primary text-slate-900 text-label-sm font-bold tracking-widest mb-8 uppercase">
+            <div className="inline-flex items-center gap-2 px-4 py-1 bg-primary text-blue-950 text-label-sm font-bold tracking-widest mb-8 uppercase">
               SOLUCIONES PREMIUM
             </div>
             <h2 className="font-display text-display-lg text-display-lg font-black leading-[1] mb-10 uppercase text-foreground tracking-tighter">
               ENTREGAS RÁPIDAS Y <br />
               <span className="text-primary italic">EFICIENTES</span>
             </h2>
-            <p className="text-gray-400 text-body-lg mb-12 leading-relaxed font-sans max-w-xl">
+            <p className="text-muted-foreground text-body-lg mb-12 leading-relaxed font-sans max-w-xl">
               Nuestro servicio Express ofrece cobertura total en Mar del Plata, llegando a barrios clave como Güemes, Chauvín, Los Troncos y la zona del Puerto con rapidez absoluta. Es la solución premium para alta criticidad horaria donde vos tenés el control total.
             </p>
 
@@ -40,15 +40,15 @@ export function ExpressContent() {
             <div className="space-y-8 mb-16">
               {features.map((feature, index) => (
                 <div
-                  key={index} 
+                  key={index}
                   className="flex items-start"
                 >
-                  <div className="w-8 h-8 bg-slate-900 border border-slate-800 flex items-center justify-center mr-6 flex-shrink-0 mt-1">
+                  <div className="w-8 h-8 bg-blue-100 border border-blue-200 flex items-center justify-center mr-6 flex-shrink-0 mt-1">
                     <Check className="w-4 h-4 text-primary" />
                   </div>
                   <div>
                     <h3 className="text-headline-lg-mobile font-bold text-foreground mb-2 font-sans uppercase tracking-tight">{feature.title}</h3>
-                    <p className="text-gray-400 text-body-md leading-relaxed font-sans">{feature.description}</p>
+                    <p className="text-muted-foreground text-body-md leading-relaxed font-sans">{feature.description}</p>
                   </div>
                 </div>
               ))}

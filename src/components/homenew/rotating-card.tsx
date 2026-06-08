@@ -48,7 +48,7 @@ export default function RotatingCard({
           width: 100%;
           height: 100%;
         }
-        
+
         .credit-card {
           width: 100%;
           height: 100%;
@@ -59,13 +59,13 @@ export default function RotatingCard({
           margin: 0 auto;
           will-change: transform;
           background: transparent;
-          box-shadow: 
-            0 40px 80px rgba(0, 0, 0, 0.5),
-            0 0 0 1px rgba(255, 255, 255, 0.15),
-            inset 0 1px 0 rgba(255, 255, 255, 0.25),
-            0 0 30px rgba(251, 193, 7, 0.1);
+          box-shadow:
+            0 40px 80px rgba(0, 0, 0, 0.1),
+            0 0 0 1px rgba(191, 219, 254, 0.5),
+            inset 0 1px 0 rgba(255, 255, 255, 0.5),
+            0 0 30px rgba(191, 219, 254, 0.2);
         }
-        
+
         .card-face {
           position: absolute;
           top: 0;
@@ -75,17 +75,17 @@ export default function RotatingCard({
           border-radius: 18px;
           transform-style: preserve-3d;
           backface-visibility: hidden;
-          border: 2px solid rgba(251, 193, 7, 0.2);
+          border: 2px solid rgba(191, 219, 254, 0.4);
         }
-        
+
         .card-front {
           transform: rotateY(0deg) translateZ(5px);
         }
-        
+
         .card-back {
           transform: rotateY(180deg) translateZ(5px);
         }
-        
+
         @keyframes elegantRotate {
           0% {
             transform: rotateY(0deg) rotateX(0deg) rotateZ(0deg) scale(1);

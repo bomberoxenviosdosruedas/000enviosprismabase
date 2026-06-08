@@ -1,0 +1,120 @@
+# src/app/page.tsx // Inicio
+
+## 1. MAIN TEXT CONTENT & COPYWRITING LABELS
+
+- **Header Navigation**:
+  - Button Label: "Inicio"
+  - Button Label: "Servicios"
+  - Button Label: "Nosotros"
+  - Button Label: "Contacto"
+  - Button Label: "Cotizar Envío"
+  - Header Link: "+54 223 660-2699"
+- **Hero Anchor**:
+  - Badge: "Tu Solución Confiable"
+  - Main Heading: "Mensajería y Logística E-Commerce en Mar del Plata"
+  - Body Paragraph: "Somos tu solución confiable en servicios de mensajería y delivery en Mar del Plata. Ofrecemos soluciones rápidas, seguras y económicas para todas tus necesidades de envío."
+  - Button Label: "Solicitar Servicio"
+  - Link Label: "Ver Servicios"
+  - Status Label: "100% SEGURO"
+  - Status Label: "ULTRA RÁPIDO"
+  - Status Label: "COBERTURA TOTAL"
+- **Vision Section**:
+  - Badge: "NUESTRA VISIÓN"
+  - Heading: "REDEFINIENDO LA LOGÍSTICA URBANA"
+  - Subtitle: "MÁS QUE ENTREGAS, CONECTAMOS OPORTUNIDADES"
+  - Body Paragraph: "En DosRuedas, no solo movemos paquetes. Impulsamos el crecimiento de comercios y empresas marplatenses a través de una infraestructura logística ágil, tecnológica y profundamente humana."
+  - Metric Value: "99.8%"
+  - Metric Label: "ENTREGAS EXITOSAS"
+  - Status Label: "EN LÍNEA"
+- **Services Overview (Slider)**:
+  - Badge: "CAPACIDADES DINÁMICAS"
+  - Heading: "SOLUCIONES A MEDIDA"
+  - Body Paragraph: "Hemos redefinido los estándares de la logística urbana para ofrecerte una ventaja competitiva real en un mercado en constante evolución."
+  - Service 1: "Envíos Express" / "Prioridad absoluta y certeza total." / "Diseñado para operaciones de alta criticidad horaria..." / "ALTA PRIORIDAD" / "Solicitar Express"
+  - Service 2: "Envíos LowCost" / "Máxima rentabilidad y eficiencia en ruteo masivo." / "Variabilizá tus costos logísticos..." / "RENTABILIDAD" / "Ahorrá con LowCost"
+  - Service 3: "Envíos Flex (MercadoLibre)" / "Potenciá tu reputación al máximo." / "Somos expertos en MercadoLibre..." / "MERCADOLIBRE" / "Activar Envíos Flex"
+  - Service 4: "E-Commerce & 3PL" / "Tercerización integral y cuentas corrientes." / "Más que un envío, somos tu depósito y tu equipo..." / "INTEGRAL" / "Hablar con un asesor"
+- **Contextual CTA (Grid)**:
+  - Heading: "Soluciones Inmediatas"
+  - Body Paragraph: "Optimización de ruteo para [cobertura_local] con tarifas desde [tarifa_base]."
+  - Button Label: "Cotizar Ahora"
+- **Entrepreneur Solutions**:
+  - Badge: "Soluciones Corporativas y PyME"
+  - Heading: "Potencia tu Logística con DosRuedas"
+  - Body Paragraph: "Transformamos la última milla de tu empresa con una flota ágil y especializada de alta precisión. Beneficios exclusivos para clientes corporativos."
+  - Metric Value: "500+" / "Empresas"
+  - Metric Value: "24/7" / "Operativa"
+  - Solution 1: "Soluciones Corporativas" / "Optimización logística para empresas con Cuenta Corriente Flexible..." / "Corporativo" / "CONFIGURAR PLAN"
+  - Solution 2: "Envíos Flex MercadoLibre" / "Socio estratégico para potenciar tus ventas..." / "MercadoLibre" / "CONFIGURAR PLAN"
+  - Solution 3: "Logística E-Commerce" / "Gestión integral de última milla para PyMEs..." / "PyMEs" / "CONFIGURAR PLAN"
+- **Social Proof Ticker**:
+  - Badge: "CONECTA CON NOSOTROS"
+  - Heading: "SIGUE NUESTRO MOVIMIENTO"
+  - Body Paragraph: "Únete a nuestra comunidad digital y mantente al día con las últimas noticias de logística en Mar del Plata."
+  - Button Label: "Instagram" / "Novedades diarias"
+  - Button Label: "Facebook" / "Comunidad activa"
+  - Button Label: "WhatsApp" / "Atención inmediata"
+  - Overlay Label: "VER POST"
+- **Matrix Footer**:
+  - Brand Tagline: "tu solución confiable"
+  - Brand Description: "Tu solución confiable para mensajería y delivery en Mar del Plata. Servicios rápidos, seguros y económicos."
+  - Column Heading: "Nosotros"
+  - Footer Link: "Sobre Nosotros"
+  - Footer Link: "Preguntas Frecuentes"
+  - Footer Link: "Nuestras Redes"
+  - Column Heading: "Servicios"
+  - Footer Link: "Envíos Express"
+  - Footer Link: "Envíos LowCost"
+  - Footer Link: "Envíos Flex (MeLi)"
+  - Footer Link: "E-Commerce & 3PL"
+  - Column Heading: "Contacto Rápido"
+  - Contact Label: "Ubicación" / "Friuli 1972, Mar del Plata"
+  - Contact Label: "Teléfono" / "+54 223 660-2699"
+  - Contact Label: "Email" / "<matiascejas@enviosdosruedas.com>"
+  - Trust Banner Label: "SEGURIDAD CERTIFICADA"
+  - Trust Banner Label: "VELOCIDAD MÁXIMA"
+  - Trust Banner Label: "COBERTURA DISTRITAL"
+  - Trust Banner Label: "STATUS ONLINE"
+  - Legal Text: "© 2025 Envios DosRuedas. Todos los derechos reservados."
+  - Legal Link: "Privacidad"
+  - Legal Link: "Términos"
+
+## 2. INTERFACE ELEMENTS & CORE COMPONENTS TREE
+
+- [Navigation Bar]:
+  - Logo brand anchor (Link to /).
+  - Nav groups (Servicios, Nosotros) with dropdown items.
+  - Direct links (Inicio, Contacto).
+  - Utility call anchor (Phone number).
+  - Primary CTA Button (Link to /cotizar/express).
+  - Mobile menu trigger.
+- [Hero Anchor]:
+  - Animated Badge.
+  - Main H1 heading.
+  - Description paragraph.
+  - CTA Button group (Primary button to /cotizar/express, Play button to /servicios/envios-express).
+  - Trust features row.
+- [Bento Layout / Grid]:
+  - Asymmetric blocks for Vision and Contextual CTA.
+- [Data Terminal / Table]:
+  - Horizontally scrolling slider containing service detail cards.
+- [Hero Anchor] (Section):
+  - Entrepreneurship focus with asymmetric heading.
+- [Social Proof Ticker]:
+  - Social network selectors.
+  - Horizontally scrolling infinite loop of social media posts.
+- [Matrix Footer]:
+  - Brand identity block.
+  - Navigation link matrices (2 columns).
+  - Contact information list.
+  - Trust status horizontal banner.
+  - Legal and policy bottom bar.
+
+## 3. TRANSMISSION & FORWARDING GOALS
+
+- **Primary CTA**: Redirects to "/cotizar/express" to initiate shipment calculation.
+- **Service CTAs**: Redirect to specific service pages ("/servicios/envios-express", "/servicios/envios-lowcost", "/servicios/enviosflex", "/servicios/plan-emprendedores").
+- **Navigation Links**: Direct user to about, contact, and legal pages.
+- **Social Connect**: External redirection to Instagram and Facebook profiles, and opening WhatsApp for direct communication.
+- **Contextual CTA**: Quick redirect to the quotation tool.
+- **Footer Navigation**: Provides comprehensive site map for easy discovery of legal and service information.

@@ -1,7 +1,7 @@
 "use server";
 
-import { prisma } from '@/lib/prisma';
-import { Prisma, ServiceType as PrismaServiceTypeEnum, Order as PrismaOrder, Client } from '../../../generated/prisma/client';
+import prisma from '@/lib/prisma';
+import { Prisma, ServiceTypeEnum as PrismaServiceTypeEnum, Order as PrismaOrder, Client } from '../../../generated/prisma/client';
 import { z } from 'zod';
 import { geocodeNominatim } from '@/lib/maps/nominatim';
 
@@ -90,7 +90,7 @@ export async function searchClientByPhone(phone: string) {
     // Serialización para evitar errores de "Decimal" en el cliente
     return {
       ...client,
-      balance: serializeDecimal(client.balance)
+      balance: serializeDecimal((client as any).balance)
     } as unknown as Client;
   } catch (error) {
     console.error('Error searching client by phone:', error);
@@ -105,7 +105,7 @@ export async function registerClient(data: { name: string; phone: string; email?
         name: data.name,
         phone: data.phone,
         email: data.email || null,
-        balance: 0,
+        address: 'N/A', // Added default address as it is required in schema
       },
     });
 
@@ -113,7 +113,7 @@ export async function registerClient(data: { name: string; phone: string; email?
       success: true,
       data: {
         ...client,
-        balance: serializeDecimal(client.balance)
+        balance: serializeDecimal((client as any).balance)
       } as unknown as Client
     };
   } catch (error: any) {

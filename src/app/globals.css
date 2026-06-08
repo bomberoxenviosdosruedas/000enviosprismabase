@@ -1,77 +1,87 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
 
+@theme {
+  /* Colors */
+  --color-background: hsl(240 17% 9%);
+  --color-foreground: hsl(228 22% 91%);
+  
+  --color-blue-brand: #0c32a0;
+  --color-gold-brand: #ffec00;
+  --color-white-brand: #ffffff;
+  
+  /* Logical mappings based on absolute trinity */
+  --color-primary: var(--color-blue-brand);
+  --color-primary-foreground: var(--color-white-brand);
+  --color-on-primary: var(--color-primary-foreground);
+  
+  --color-secondary: var(--color-gold-brand);
+  --color-secondary-foreground: hsl(240 17% 9%);
+  --color-on-secondary: var(--color-secondary-foreground);
+
+  --color-error: hsl(0 84% 60%);
+  --color-on-error: hsl(240 17% 9%);
+  
+  --color-muted: hsl(240 10% 20%);
+  --color-muted-foreground: hsl(240 10% 70%);
+  
+  /* System variables for Shadcn/UI support */
+  --color-surface-container: hsl(240 15% 12%);
+  --color-surface-container-low: hsl(240 15% 10%);
+  --color-surface-container-high: hsl(240 15% 15%);
+  --color-surface-container-highest: hsl(240 15% 18%);
+  
+  --color-on-surface: hsl(228 22% 91%);
+  --color-on-surface-variant: hsl(228 10% 75%);
+  
+  --color-outline-variant: hsl(240 10% 22%);
+  
+  /* Geometry (Strict cyber-brutalist constraint) */
+  --radius-brand: 0.25rem; /* 4px */
+  --radius-none: 0rem;
+  
+  /* Typography */
+  --font-display: "Anton", sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+  --font-sans: "Geist", sans-serif;
+}
+
+/* Base resets */
 @layer base {
-  :root {
-    /* Nueva paleta basada en azul solicitada */
-    --background: 210 20% 98%;    /* #f5f7fa */
-    --foreground: 228 30% 15%;   /* #1a2238 */
-
-    --primary: 221 47% 43%;     /* #3a5ba0 */
-    --primary-foreground: 54 100% 95%; /* #fffbe6 */
-
-    --secondary: 40 90% 72%;    /* #f7c873 */
-    --secondary-foreground: 228 30% 15%;
-
-    --card: 220 25% 92%;        /* #e3eaf2 */
-    --card-foreground: 228 30% 15%;
-
-    --popover: 54 100% 95%;     /* #fffbe6 */
-    --popover-foreground: 228 30% 15%;
-
-    --muted: 60 10% 90%;        /* #e5e5df */
-    --muted-foreground: 221 47% 43%; /* Azul como muted */
-
-    --accent: 202 33% 59%;      /* #6ea3c1 */
-    --accent-foreground: 54 100% 95%;
-
-    --destructive: 279 22% 15%; /* #2d1e2f */
-    --destructive-foreground: 54 100% 95%;
-
-    --border: 216 10% 70%;       /* #b0b8c1 */
-    --input: 202 33% 59%;
-    --ring: 40 90% 72%;
-
-    --radius: 0.5rem;
-  }
-
   body {
-    background-color: hsl(var(--background));
-    color: hsl(var(--foreground));
-    font-family: 'Libre Baskerville', serif;
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    font-family: var(--font-sans);
+  }
+  
+  /* Focus Styles */
+  *:focus-visible {
+    outline: 2px solid var(--color-blue-brand);
+    outline-offset: 2px;
+  }
+  
+  /* Webkit scrollbar alignment */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+  ::-webkit-scrollbar-track {
+    background: var(--color-background);
+  }
+  ::-webkit-scrollbar-thumb {
+    background: var(--color-blue-brand);
+    border-radius: var(--radius-brand);
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--color-gold-brand);
   }
 }
 
-/* Scrollbar actualizado con tonos azules */
-::-webkit-scrollbar {
-  width: 8px;
-}
-::-webkit-scrollbar-track {
-  background: #e3eaf2;
-}
-::-webkit-scrollbar-thumb {
-  background: #3a5ba0;
-  border-radius: 4px;
-}
-::-webkit-scrollbar-thumb:hover {
-  background: #2b3fff;
+/* Custom global utilities layer matching our verified cyber-brutalist specs */
+@utility glass-panel {
+  background: rgba(19, 19, 27, 0.7);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-/* Focus styles */
-*:focus-visible {
-  outline: 2px solid #3a5ba0;
-  outline-offset: 2px;
-}
-
-@layer utilities {
-  .glass-panel {
-    background: rgba(227, 234, 242, 0.7);
-    backdrop-filter: blur(12px);
-    border: 1px solid rgba(176, 184, 193, 0.5);
-  }
-
-  .glow-primary {
-    box-shadow: 0 0 20px rgba(58, 91, 160, 0.15);
-  }
+@utility glow-primary {
+  box-shadow: 0 0 20px rgba(12, 50, 160, 0.15);
 }

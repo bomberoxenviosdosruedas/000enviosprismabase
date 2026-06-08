@@ -31,10 +31,10 @@ export default function HomePage() {
               </div>
               <div className="col-span-12 lg:col-span-4">
                 {/* CTA Contextual block integrated in grid */}
-                <div className="h-full bg-zinc-900/50 rounded-2xl border border-zinc-800 p-12 flex flex-col justify-center">
+                <div className="h-full bg-surface-container/50 rounded-[var(--radius-brand)] border border-outline-variant p-12 flex flex-col justify-center">
                   <h3 className="text-2xl font-bold mb-4 uppercase tracking-tight">Soluciones Inmediatas</h3>
-                  <p className="text-zinc-400 mb-8 font-light">Optimización de ruteo para [cobertura_local] con tarifas desde [tarifa_base].</p>
-                  <button className="w-full py-4 bg-yellow-400 text-black font-bold rounded-xl uppercase tracking-tighter hover:bg-yellow-300 transition-all">
+                  <p className="text-on-surface-variant mb-8 font-light">Optimización de ruteo para [cobertura_local] con tarifas desde [tarifa_base].</p>
+                  <button className="w-full py-4 bg-secondary text-secondary-foreground font-bold rounded-[var(--radius-brand)] uppercase tracking-tighter hover:bg-secondary/90 transition-all">
                     Cotizar Ahora
                   </button>
                 </div>
